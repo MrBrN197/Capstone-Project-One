@@ -3,19 +3,6 @@
 .welcome {
   align-items: flex-start;
   color: $color1;
-
-  h1 {
-    background: url("https://images.unsplash.com/photo-1501386761578-eac5c94b800a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80");
-  }
-}
-
-.featured-speakers .card {
-  display: flex;
-}
-
-.featured-speakers .card .image {
-  width: 10rem;
-  height: 10rem;
 }
 
 .more-button {
@@ -24,6 +11,7 @@
   @extend .flex-center;
   width: 100%;
   padding: 1rem 0;
+  gap: 0.4rem;
 }
 
 
@@ -59,7 +47,6 @@ section.main-program .card {
   width: 100%;
   border-radius: 0.1em;
 
-
   .icon {
     width: 4rem;
     height: 4rem;
@@ -75,5 +62,64 @@ section.main-program .card {
     color: #ec5242;
     font-weight: bold;
     width: 10rem;
+  }
+}
+
+section.featured-speakers .card-container {
+  padding-bottom: 5rem;
+}
+
+section.featured-speakers .card {
+  display: flex;
+  background-color: rgba($white, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  gap: 2rem;
+  width: 100%;
+  border-radius: 0.1em;
+
+  .image {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .image-container {
+    background-image: url("../images/checkerboard.png");
+    background-size: 40%;
+    background-repeat: no-repeat;
+
+    position: relative;
+    img {
+      position: absolute;
+      width: 90%;
+      height: 90%;
+      bottom: 0;
+      right: 0;
+    }
+  }
+
+  .content {
+    .description {
+    }
+
+    .heading {
+      font-style: italic;
+      color: $orange;
+      position: relative;
+      padding-bottom: 1.2em;
+      padding-top: 0.5em;
+      margin-bottom: 1em;
+
+    }
+    .heading::after {
+      @extend %pseudo;
+      bottom: 0;
+      left: 0;
+      height: 0.2em;
+      width: 2em;
+      background-color: $color3;
+    }
   }
 }

@@ -33,6 +33,9 @@ button {
   font-family: inherit;
   display: block;
   cursor: pointer;
+  padding: 1.4em;
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 
 img {
@@ -67,7 +70,9 @@ section {
   @extend .flex-column;
   @extend .flex-center;
 
-  padding: 0 1rem;
+  padding: 1rem;
+
+  gap: 2rem;
 
   .sub-heading {
     color: $orange;
@@ -93,7 +98,7 @@ section {
     width: 2em;
     border-radius: $h * 0.5;
     margin: 0 auto;
-    margin-top: 0.2em;
+    margin-top: 0.8em;
     background-color: $orange;
   }
 } 
@@ -110,4 +115,11 @@ footer {
     font-weight: bold;
     line-height: 1;
   }
+}
+
+
+%pseudo {
+  display: block;
+  content: "";
+  position: absolute;
 }

@@ -130,6 +130,9 @@ button {
   font-family: inherit;
   display: block;
   cursor: pointer;
+  padding: 1.4em;
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 
 img {
@@ -161,7 +164,8 @@ main section + section {
 }
 
 section {
-  padding: 0 1rem;
+  padding: 1rem;
+  gap: 2rem;
 }
 section .sub-heading {
   color: #ec5242;
@@ -183,7 +187,7 @@ section h2::after {
   width: 2em;
   border-radius: 0.05em;
   margin: 0 auto;
-  margin-top: 0.2em;
+  margin-top: 0.8em;
   background-color: #ec5242;
 }
 
@@ -199,26 +203,21 @@ footer .left {
   line-height: 1;
 }
 
+section.featured-speakers .card .content .heading::after {
+  display: block;
+  content: "";
+  position: absolute;
+}
+
 .welcome {
   align-items: flex-start;
   color: #272a31;
-}
-.welcome h1 {
-  background: url("https://images.unsplash.com/photo-1501386761578-eac5c94b800a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80");
-}
-
-.featured-speakers .card {
-  display: flex;
-}
-
-.featured-speakers .card .image {
-  width: 10rem;
-  height: 10rem;
 }
 
 .more-button {
   width: 100%;
   padding: 1rem 0;
+  gap: 0.4rem;
 }
 
 section.main-program {
@@ -264,6 +263,54 @@ section.main-program .card .heading {
   color: #ec5242;
   font-weight: bold;
   width: 10rem;
+}
+
+section.featured-speakers .card-container {
+  padding-bottom: 5rem;
+}
+
+section.featured-speakers .card {
+  display: flex;
+  background-color: rgba(248, 248, 248, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  gap: 2rem;
+  width: 100%;
+  border-radius: 0.1em;
+}
+section.featured-speakers .card .image {
+  width: 10rem;
+  height: 10rem;
+}
+section.featured-speakers .card .image-container {
+  background-image: url("../images/checkerboard.png");
+  background-size: 40%;
+  background-repeat: no-repeat;
+  position: relative;
+}
+section.featured-speakers .card .image-container img {
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  bottom: 0;
+  right: 0;
+}
+section.featured-speakers .card .content .heading {
+  font-style: italic;
+  color: #ec5242;
+  position: relative;
+  padding-bottom: 1.2em;
+  padding-top: 0.5em;
+  margin-bottom: 1em;
+}
+section.featured-speakers .card .content .heading::after {
+  bottom: 0;
+  left: 0;
+  height: 0.2em;
+  width: 2em;
+  background-color: #d3d3d3;
 }
 
 /*# sourceMappingURL=style.css.map */
