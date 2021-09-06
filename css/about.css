@@ -112,6 +112,17 @@ section h2::after {
   background-color: #ec5242;
 }
 
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 4rem 0;
+}
+footer .left {
+  font-size: 1.4rem;
+  font-weight: bold;
+  line-height: 1;
+}
 .prev-summits .image {
   width: 18rem;
   height: 10rem;

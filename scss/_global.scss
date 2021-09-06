@@ -75,5 +75,22 @@ section {
     margin-top: 0.2em;
     background-color: $orange;
   }
+} 
 
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  
+  padding: 4rem 0;
+
+  .left  {
+    font-size: 1.4rem;
+    font-weight: bold;
+    line-height: 1;
+  }
+
+  .right {
+
+  }
 }

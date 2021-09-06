@@ -23,7 +23,7 @@
 }
 
 /* general classes */
-.flex, section.main-program {
+.flex {
   display: flex;
   flex-direction: row;
 }
@@ -112,6 +112,17 @@ section h2::after {
   background-color: #ec5242;
 }
 
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 4rem 0;
+}
+footer .left {
+  font-size: 1.4rem;
+  font-weight: bold;
+  line-height: 1;
+}
 .featured-speakers .card {
   display: flex;
 }
@@ -129,7 +140,6 @@ section h2::after {
 }
 
 section.main-program {
-  align-items: center;
   background-color: #272a31;
 }
 
