@@ -37,6 +37,27 @@
 			}
 		}
 	}
+}
 
 
+section.partner {
+	background-color: lighten($color1, 5%);
+	color: $white;
+
+	ul {
+		gap: 2rem;
+		padding: 2rem;
+	}
+
+	ul li {
+		display: block;
+		filter: grayscale(100%) contrast(30%);
+	}
+
+	ul li img {
+		height: 3rem;
+		object-fit: contain;
+		// padding: 1rem;
+		// box-sizing: content-box;
+	}
 }

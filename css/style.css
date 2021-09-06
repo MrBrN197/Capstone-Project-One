@@ -103,10 +103,12 @@ section h2 {
   width: max-content;
 }
 section h2::after {
+  bottom: 0;
   content: "";
   display: block;
   height: 0.1em;
-  width: 4em;
+  width: 2em;
+  border-radius: 0.05em;
   margin: 0 auto;
   margin-top: 0.2em;
   background-color: #ec5242;

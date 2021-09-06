@@ -103,10 +103,12 @@ section h2 {
   width: max-content;
 }
 section h2::after {
+  bottom: 0;
   content: "";
   display: block;
   height: 0.1em;
-  width: 4em;
+  width: 2em;
+  border-radius: 0.05em;
   margin: 0 auto;
   margin-top: 0.2em;
   background-color: #ec5242;
@@ -150,6 +152,22 @@ footer .left {
 .prev-summits .image .image-text .heading {
   font-size: 2rem;
   font-weight: bold;
+}
+section.partner {
+  background-color: #32363f;
+  color: #fff;
+}
+section.partner ul {
+  gap: 2rem;
+  padding: 2rem;
+}
+section.partner ul li {
+  display: block;
+  filter: grayscale(100%) contrast(30%);
+}
+section.partner ul li img {
+  height: 3rem;
+  object-fit: contain;
 }
 
 /*# sourceMappingURL=about.css.map */

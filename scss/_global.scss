@@ -67,10 +67,13 @@ section {
   } 
 
   h2::after {
+    $h: 0.1em;
+    bottom: 0;
     content: "";
     display: block;
-    height: 0.1em;
-    width: 4em;
+    height: $h;
+    width: 2em;
+    border-radius: $h * 0.5;
     margin: 0 auto;
     margin-top: 0.2em;
     background-color: $orange;
