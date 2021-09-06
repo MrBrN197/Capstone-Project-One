@@ -2,6 +2,62 @@
   font-weight: bold;
 }
 
+.fw-1 {
+  font-weight: 100;
+}
+
+.fw-2 {
+  font-weight: 200;
+}
+
+.fw-3 {
+  font-weight: 300;
+}
+
+.fw-4 {
+  font-weight: 400;
+}
+
+.fw-5 {
+  font-weight: 500;
+}
+
+.fw-6 {
+  font-weight: 600;
+}
+
+.fw-7 {
+  font-weight: 700;
+}
+
+.fw-8 {
+  font-weight: 800;
+}
+
+.fw-9 {
+  font-weight: 900;
+}
+
+.text-xsmall {
+  font-size: 0.5rem;
+}
+
+.text-small {
+  font-size: 1rem;
+}
+
+.text-medium {
+  font-size: 1.25rem;
+}
+
+.text-large {
+  font-size: 1.75rem;
+}
+
+.text-xlarge {
+  font-size: 1.75rem;
+}
+
 .text-dbar {
   position: relative;
   width: fit-content;
@@ -23,7 +79,7 @@
 }
 
 /* general classes */
-.flex {
+.flex, .more-button {
   display: flex;
   flex-direction: row;
 }
@@ -37,7 +93,7 @@
   flex-wrap: wrap;
 }
 
-.flex-center, section {
+.flex-center, section, .more-button {
   align-items: center;
   justify-content: center;
 }
@@ -57,6 +113,7 @@
 body {
   font-family: cocogoose, sans-seriff;
   font-family: Lato, sans-seriff;
+  background-color: #f8f8f8;
 }
 
 ul {
@@ -72,6 +129,7 @@ button {
   border: none;
   font-family: inherit;
   display: block;
+  cursor: pointer;
 }
 
 img {
@@ -102,6 +160,17 @@ main section + section {
   border-top: 1px solid #d3d3d3;
 }
 
+section {
+  padding: 0 1rem;
+}
+section .sub-heading {
+  color: #ec5242;
+  font-size: 1.5rem;
+}
+section h1 {
+  color: #ec5242;
+  font-size: 3.5rem;
+}
 section h2 {
   position: relative;
   width: max-content;
@@ -129,6 +198,15 @@ footer .left {
   font-weight: bold;
   line-height: 1;
 }
+
+.welcome {
+  align-items: flex-start;
+  color: #272a31;
+}
+.welcome h1 {
+  background: url("https://images.unsplash.com/photo-1501386761578-eac5c94b800a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80");
+}
+
 .featured-speakers .card {
   display: flex;
 }
@@ -139,16 +217,17 @@ footer .left {
 }
 
 .more-button {
-  display: flex;
-  align-items: center;
   width: 100%;
-  justify-content: center;
+  padding: 1rem 0;
 }
 
 section.main-program {
   background-color: #272a31;
+  background-image: url("../images/icons/x.svg");
 }
-
+section.main-program h2 {
+  color: #f8f8f8;
+}
 section.main-program button {
   background-color: #ec5242;
   color: white;
@@ -156,23 +235,35 @@ section.main-program button {
 
 .card-container {
   align-items: center;
+  gap: 0.8rem;
+  width: 100%;
 }
 
-.card {
-  background-color: rgba(255, 255, 255, 0.1);
+section.main-program .card {
+  background-color: rgba(248, 248, 248, 0.1);
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  gap: 2rem;
+  width: 100%;
+  border-radius: 0.1em;
 }
-.card .icon {
+section.main-program .card .icon {
   width: 4rem;
   height: 4rem;
+  flex: 0 0 auto;
 }
-.card .description {
+section.main-program .card .description {
   color: white;
+  font-size: 0.8rem;
+  line-height: 1.5;
 }
-.card .heading {
+section.main-program .card .heading {
+  font-size: 1.4rem;
   color: #ec5242;
   font-weight: bold;
+  width: 10rem;
 }
 
 /*# sourceMappingURL=style.css.map */

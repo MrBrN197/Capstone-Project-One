@@ -16,6 +16,7 @@
 body {
   font-family: cocogoose, sans-seriff;
   font-family: Lato, sans-seriff;
+  background-color: $white;
 }
 
 ul {
@@ -31,6 +32,7 @@ button {
   border: none;
   font-family: inherit;
   display: block;
+  cursor: pointer;
 }
 
 img {
@@ -65,6 +67,18 @@ section {
   @extend .flex-column;
   @extend .flex-center;
 
+  padding: 0 1rem;
+
+  .sub-heading {
+    color: $orange;
+    font-size: 1.5rem;
+  }
+
+  h1 {
+    color: $orange;
+    font-size: 3.5rem;
+  }
+
   h2 {
     position: relative;
     width: max-content;
@@ -95,9 +109,5 @@ footer {
     font-size: 1.4rem;
     font-weight: bold;
     line-height: 1;
-  }
-
-  .right {
-
   }
 }

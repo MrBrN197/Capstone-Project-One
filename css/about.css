@@ -2,6 +2,62 @@
   font-weight: bold;
 }
 
+.fw-1 {
+  font-weight: 100;
+}
+
+.fw-2 {
+  font-weight: 200;
+}
+
+.fw-3 {
+  font-weight: 300;
+}
+
+.fw-4 {
+  font-weight: 400;
+}
+
+.fw-5 {
+  font-weight: 500;
+}
+
+.fw-6 {
+  font-weight: 600;
+}
+
+.fw-7 {
+  font-weight: 700;
+}
+
+.fw-8 {
+  font-weight: 800;
+}
+
+.fw-9 {
+  font-weight: 900;
+}
+
+.text-xsmall {
+  font-size: 0.5rem;
+}
+
+.text-small {
+  font-size: 1rem;
+}
+
+.text-medium {
+  font-size: 1.25rem;
+}
+
+.text-large {
+  font-size: 1.75rem;
+}
+
+.text-xlarge {
+  font-size: 1.75rem;
+}
+
 .text-dbar {
   position: relative;
   width: fit-content;
@@ -57,6 +113,7 @@
 body {
   font-family: cocogoose, sans-seriff;
   font-family: Lato, sans-seriff;
+  background-color: #f8f8f8;
 }
 
 ul {
@@ -72,6 +129,7 @@ button {
   border: none;
   font-family: inherit;
   display: block;
+  cursor: pointer;
 }
 
 img {
@@ -102,6 +160,17 @@ main section + section {
   border-top: 1px solid #d3d3d3;
 }
 
+section {
+  padding: 0 1rem;
+}
+section .sub-heading {
+  color: #ec5242;
+  font-size: 1.5rem;
+}
+section h1 {
+  color: #ec5242;
+  font-size: 3.5rem;
+}
 section h2 {
   position: relative;
   width: max-content;
@@ -129,6 +198,7 @@ footer .left {
   font-weight: bold;
   line-height: 1;
 }
+
 .prev-summits .image {
   width: 18rem;
   height: 10rem;
@@ -151,7 +221,7 @@ footer .left {
   bottom: 0;
   left: 0;
   right: 0;
-  color: #fff;
+  color: #f8f8f8;
 }
 .prev-summits .image .image-text .heading {
   font-size: 2rem;
@@ -159,7 +229,7 @@ footer .left {
 }
 section.partner {
   background-color: #32363f;
-  color: #fff;
+  color: #f8f8f8;
 }
 section.partner ul {
   gap: 2rem;

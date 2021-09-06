@@ -4,6 +4,24 @@
   font-weight: bold;
 }
 
+$sizes: (1, 2, 3, 4, 5, 6, 7, 8, 9);
+
+@each $s in $sizes {
+  .fw-#{$s} {
+    font-weight: $s * 100;
+  }
+}
+
+
+$font-sizes: (xsmall: 1rem, small: 2rem, medium: 2.5rem, large: 3.5rem, xlarge: 3.5rem);
+
+@each $name, $size in $font-sizes {
+  .text-#{$name} {
+    font-size: $size * 0.5;
+  }
+}
+
+
 .text-dbar {
   position: relative;
   width: fit-content;
