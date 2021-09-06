@@ -1,7 +1,15 @@
 @font-face {
 	font-family: 'cocogoose';
 	font-style: normal;
-	font-weight: normal;
+	font-weight: 400;
 	font-display: swap;
-	src: url("/fonts/cocogoose/Cocogoose\ Pro\ Thin-trial.ttf") format('truetype');
+	src: url("/fonts/cocogoose/Cocogoose Pro Regular Trial.ttf") format('truetype');
+}
+
+@font-face {
+	font-family: 'cocogoose';
+	font-style: normal;
+	font-weight: 300;
+	font-display: swap;
+	src: url("/fonts/cocogoose/Cocogoose Pro Light-trial.ttf") format('truetype');
 }
