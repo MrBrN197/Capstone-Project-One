@@ -1,0 +1,26 @@
+/* general classes */
+.flex {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-center {
+  align-items: center;
+  justify-content: center;
+}
+
+
+.box {
+  border: 1px solid #d3d3d3;
+  background-color: white;
+  border-radius: 0.2em;
+}

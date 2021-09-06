@@ -1,0 +1,53 @@
+@use 'global' as *;
+
+
+.featured-speakers .card {
+  display: flex;
+}
+
+.featured-speakers .card .image {
+  width: 10rem;
+  height: 10rem;
+}
+
+.more-button {
+  @extend .box;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+}
+
+
+section.main-program {
+  @extend .flex;
+  align-items: center;
+  background-color: #272a31;
+}
+section.main-program button {
+  background-color: #ec5242;
+  color: white;
+}
+
+.card-container {
+  @extend .flex-column;
+  align-items: center;
+}
+
+.card {
+  background-color: rgba($white, 0.1);
+  display: flex;
+  align-items: center;
+
+  .icon {
+    width: 4rem;
+    height: 4rem;
+  }
+  .description {
+    color: white;
+  }
+  .heading {
+    color: #ec5242;
+    font-weight: bold;
+  }
+}

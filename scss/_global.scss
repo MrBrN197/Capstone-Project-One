@@ -1,0 +1,79 @@
+
+@forward 'color';
+@forward 'text';
+@forward 'classes';
+
+@use 'color' as *;
+@use 'text' as *;
+@use 'classes' as *;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: cocogoose, sans-seriff;
+  font-family: Lato, sans-seriff;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  font-family: inherit;
+  display: block;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.icon {
+  width: 2em;
+  height: 2em;
+  background-color: crimson;  @warn('TODO: remove this background-color');
+}
+
+header {
+  height: 4rem;
+  box-shadow: 0 2px 2px $color3;
+}
+
+header {
+  display: flex;
+  align-items: center;
+}
+
+section {
+  @extend .flex-column;
+  @extend .flex-center;
+
+  h2 {
+    position: relative;
+    width: max-content;
+  } 
+
+  h2::after {
+    content: "";
+    display: block;
+    height: 0.1em;
+    width: 4em;
+    margin: 0 auto;
+    margin-top: 0.2em;
+    background-color: $orange;
+  }
+
+}

@@ -23,12 +23,12 @@
 }
 
 /* general classes */
-.flex, section.main-program {
+.flex {
   display: flex;
   flex-direction: row;
 }
 
-.flex-column, section, .card-container {
+.flex-column, section {
   display: flex;
   flex-direction: column;
 }
@@ -42,7 +42,7 @@
   justify-content: center;
 }
 
-.box, .more-button {
+.box {
   border: 1px solid #d3d3d3;
   background-color: white;
   border-radius: 0.2em;
@@ -112,51 +112,33 @@ section h2::after {
   background-color: #ec5242;
 }
 
-.featured-speakers .card {
-  display: flex;
-}
-
-.featured-speakers .card .image {
-  width: 10rem;
+.prev-summits .image {
+  width: 18rem;
   height: 10rem;
+  background-color: yellowgreen;
+  position: relative;
 }
-
-.more-button {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  justify-content: center;
+.prev-summits .image::before {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(232, 48, 29, 0.6);
 }
-
-section.main-program {
-  align-items: center;
-  background-color: #272a31;
+.prev-summits .image .image-text {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #fff;
 }
-
-section.main-program button {
-  background-color: #ec5242;
-  color: white;
-}
-
-.card-container {
-  align-items: center;
-}
-
-.card {
-  background-color: rgba(255, 255, 255, 0.1);
-  display: flex;
-  align-items: center;
-}
-.card .icon {
-  width: 4rem;
-  height: 4rem;
-}
-.card .description {
-  color: white;
-}
-.card .heading {
-  color: #ec5242;
+.prev-summits .image .image-text .heading {
+  font-size: 2rem;
   font-weight: bold;
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=about.css.map */

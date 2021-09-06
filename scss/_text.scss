@@ -1,0 +1,28 @@
+@use 'color' as *;
+
+.bold {
+  font-weight: bold;
+}
+
+.text-dbar {
+  position: relative;
+  width: fit-content;
+  width: -moz-fit-content;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    display: block;
+    height: 0.1em;
+    width: 100%;
+    background-color: $color3;
+  }
+  &::before {
+    top: 0;
+  }
+  &::after {
+    bottom: 0;
+  }
+
+}

@@ -1,0 +1,47 @@
+@use 'global' as *;
+
+
+.prev-summits {
+	.image {
+		width: 18rem;
+		height: 10rem;
+		background-color: yellowgreen; @warn("TODO: remove this");
+		position: relative;
+
+		&::before {
+			position: absolute; @warn("TODO: make dry");
+			content: "";
+			display: block;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background-color: rgba(darken($orange, 8%), 0.6);
+		} 
+
+		.image-text {
+			// display: flex;
+			// 	justify-content: center;
+			// 	align-items: center;
+
+			position: absolute;
+			// background-color: yellowgreen;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			color: $white;
+
+			.heading {
+				font-size: 2rem;
+				font-weight: bold;
+			}
+			
+			.description {
+
+			}
+		}
+	}
+
+
+}
