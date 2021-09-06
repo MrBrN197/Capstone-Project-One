@@ -167,7 +167,7 @@ section {
   padding: 1rem;
   gap: 2rem;
 }
-section .sub-heading {
+section h1 .sub-heading {
   color: #ec5242;
   font-size: 1.5rem;
 }
