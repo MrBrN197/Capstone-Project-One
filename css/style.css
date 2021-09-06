@@ -98,6 +98,10 @@ header {
   align-items: center;
 }
 
+main section + section {
+  border-top: 1px solid #d3d3d3;
+}
+
 section h2 {
   position: relative;
   width: max-content;
