@@ -171,12 +171,12 @@
 }
 
 /* general classes */
-.flex, .more-button {
+.flex, .more-button, section.featured-speakers .card-container {
   display: flex;
   flex-direction: row;
 }
 
-.flex-column, main section, .card-container {
+.flex-column, main section, section.main-program .card-container {
   display: flex;
   flex-direction: column;
 }
@@ -258,6 +258,18 @@
   border: 1px solid #d3d3d3;
   background-color: white;
   border-radius: 0.2em;
+}
+
+@media screen and (min-width: 768px) {
+  .mobile-only {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .desktop-only {
+    display: none;
+  }
 }
 
 * {
@@ -359,6 +371,23 @@ main section h2::after {
   background-color: #ec5242;
 }
 
+section.partner {
+  background-color: #32363f;
+  color: #f5f5f8;
+}
+section.partner ul {
+  gap: 2rem;
+  padding: 2rem;
+}
+section.partner ul li {
+  display: block;
+  filter: grayscale(100%) contrast(30%);
+  height: 2rem;
+}
+section.partner ul li img {
+  object-fit: contain;
+}
+
 footer {
   display: flex;
   flex-direction: row;
@@ -387,7 +416,7 @@ section.welcome {
   align-items: flex-start;
 }
 section.welcome > * {
-  width: 30rem;
+  max-width: 30rem;
 }
 section.welcome .white-box {
   border: 0.3em solid white;
@@ -415,16 +444,27 @@ section.main-program button {
   background-color: #ec5242;
   color: white;
 }
+section.main-program a {
+  text-transform: uppercase;
+  color: #f5f5f8;
+  font-weight: normal;
+  padding: 2rem 0;
+}
 section.main-program .card-container {
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
 }
 
-.card-container {
+section.main-program .card-container {
   align-items: center;
   gap: 0.8rem;
   width: 100%;
+}
+@media screen and (min-width: 768px) {
+  section.main-program .card-container {
+    gap: 0.2em;
+  }
 }
 
 section.main-program .card {
@@ -439,8 +479,8 @@ section.main-program .card {
 @media screen and (min-width: 768px) {
   section.main-program .card {
     flex-direction: column;
-    max-width: 14rem;
     min-width: 0;
+    max-width: 14rem;
     text-align: center;
   }
 }
@@ -463,7 +503,7 @@ section.main-program .card .heading {
 }
 
 section.featured-speakers .card-container {
-  padding-bottom: 5rem;
+  flex-wrap: wrap;
 }
 
 section.featured-speakers .card {
@@ -474,8 +514,12 @@ section.featured-speakers .card {
   justify-content: space-between;
   padding: 1rem;
   gap: 2rem;
-  width: 100%;
   border-radius: 0.1em;
+}
+@media screen and (min-width: 768px) {
+  section.featured-speakers .card {
+    width: 50%;
+  }
 }
 section.featured-speakers .card .image {
   width: 8rem;

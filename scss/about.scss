@@ -4,6 +4,13 @@ main section {
 	text-align: center;
 }
 
+section.welcome {
+	@include on-desktop {
+		margin-left: 6rem;
+		margin-right: 6rem;
+	}
+}
+
 .prev-summits {
 
 	.image {
@@ -46,34 +53,14 @@ main section {
 	}
 }
 
-
-section.partner {
-	background-color: lighten($color1, 5%);
-	color: $white;
-
-	ul {
-		gap: 2rem;
-		padding: 2rem;
-	}
-
-	ul li {
-		display: block;
-		filter: grayscale(100%) contrast(30%);
-		height: 2rem;
-	}
-
-	ul li img {
-		object-fit: contain;
-		// padding: 1rem;
-		// box-sizing: content-box;
-	}
-}
-
-
 .copyright-box {
 	padding: 1rem;
 	gap: 1rem;
 	width: 100%;
+
+	@include on-desktop {
+		width: unset;
+	}
 
 	.icon {
 		width: 4rem;
@@ -87,11 +74,13 @@ section.partner {
 	.copyright-text p:nth-child(1) {
 		font-size: 2rem;
 		letter-spacing: 0.25rem;
+		color: $color1;
 	}
 
 	.copyright-text p:nth-child(2) {
 		font-size: 1.5rem;
 		letter-spacing: 0.2rem;
+		color: $color1;
 	}
 	.copyright-text p:nth-child(3) {
 		font-size: 0.7rem;

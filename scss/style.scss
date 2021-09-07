@@ -4,7 +4,7 @@ section.welcome {
   align-items: flex-start;
 
   > * {
-    width: 30rem;
+    max-width: 30rem;
   }
 
   .white-box {
@@ -41,6 +41,13 @@ section.main-program {
     color: white;
   }
 
+  a {
+    text-transform: uppercase;
+    color: $white;
+    font-weight: normal;
+    padding: 2rem 0;
+  }
+
   .card-container {
     flex-direction: row;
     justify-content: center;
@@ -49,11 +56,15 @@ section.main-program {
 
 }
 
-.card-container {
+section.main-program .card-container {
   @extend .flex-column;
   align-items: center;
   gap: 0.8rem;
   width: 100%;
+  
+  @include on-desktop {
+    gap: 0.2em;
+  }
 }
 
 section.main-program .card {
@@ -66,13 +77,13 @@ section.main-program .card {
   min-width: 100%;
   border-radius: 0.1em;
 
-  @media screen and (min-width: 768px) {
+  @include on-desktop {
     flex-direction: column;
-    max-width: 14rem;
     min-width: 0;
+    max-width: 14rem;
     text-align: center;
   }
-  
+
   .icon {
     width: 3rem;
     height: 3rem;
@@ -93,8 +104,11 @@ section.main-program .card {
 }
 
 section.featured-speakers .card-container {
-  padding-bottom: 5rem;
+  @extend .flex;
+  flex-wrap: wrap;
+  // gap: 0.2rem;
 }
+
 
 section.featured-speakers .card {
   display: flex;
@@ -104,8 +118,11 @@ section.featured-speakers .card {
   justify-content: space-between;
   padding: 1rem;
   gap: 2rem;
-  width: 100%;
   border-radius: 0.1em;
+
+  @include on-desktop {
+    width: 50%;
+  }
 
   .image {
     width: 8rem;

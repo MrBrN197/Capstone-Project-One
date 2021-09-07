@@ -7,6 +7,31 @@
 @use 'text' as *;
 @use 'classes' as *;
 
+
+@mixin on-desktop {
+  @media screen and (min-width: 768px) {
+    @content
+  }
+}
+
+@mixin on-mobile {
+  @media screen and (max-width: 767px) {
+    @content
+  }
+}
+
+.mobile-only {
+  @include on-desktop {
+    display: none;
+  }
+}
+
+.desktop-only {
+  @include on-mobile {
+    display: none;
+  }
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -86,6 +111,7 @@ main section + section {
 main section {
   @extend .flex-column;
   @extend .flex-center;
+
   padding: 1rem;
   gap: 2rem;
 
@@ -120,6 +146,28 @@ main section {
     background-color: $orange;
   }
 } 
+
+section.partner {
+	background-color: lighten($color1, 5%);
+	color: $white;
+
+	ul {
+		gap: 2rem;
+		padding: 2rem;
+	}
+
+	ul li {
+		display: block;
+		filter: grayscale(100%) contrast(30%);
+		height: 2rem;
+	}
+
+	ul li img {
+		object-fit: contain;
+		// padding: 1rem;
+		// box-sizing: content-box;
+	}
+}
 
 footer {
   display: flex;
