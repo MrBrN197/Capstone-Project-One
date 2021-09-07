@@ -180,7 +180,6 @@ main section {
   }
 
   h2 {
-    position: relative;
     text-align: center;
   } 
 
@@ -242,6 +241,47 @@ footer {
   }
 }
 
+
+#mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: $color1;
+  display: none;
+  z-index: 1;
+
+  .close-btn {
+    height: 3rem;
+    width: 3rem;
+    margin-left: auto;
+    padding: 1rem;
+    box-sizing: content-box;
+    color: $orange;
+  }
+
+  ul {
+    // background-color: yellowgreen;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1em;
+    font-size: 1.6rem;
+    margin: 2rem;
+
+    li {
+      padding: 0.2em;
+      display: block;
+      background-color: rgba($orange, 0.15);
+      color: $orange;
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+
+}
 
 %pseudo {
   display: block;
