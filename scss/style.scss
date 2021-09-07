@@ -34,7 +34,7 @@ section.welcome {
 }
 
 section.main-program {
-  background-color: #272a31;
+  background-color: $color1;
   background-image: url("../images/icons/x.svg");
 
   h2 {
@@ -42,7 +42,7 @@ section.main-program {
   }
 
   button {
-    background-color: #ec5242;
+    background-color: $orange;
     color: white;
   }
 
@@ -102,7 +102,7 @@ section.main-program .card {
   }
   .heading {
     font-size: 1.4rem;
-    color: #ec5242;
+    color: $orange;
     font-weight: bold;
     min-width: 10rem;
   }
@@ -150,8 +150,7 @@ section.featured-speakers .card {
   }
 
   .content {
-    .description {
-    }
+    // .description {}
 
     .heading {
       font-style: italic;

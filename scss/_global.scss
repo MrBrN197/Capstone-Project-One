@@ -38,9 +38,9 @@
   box-sizing: border-box;
 }
 
-html {
-  // font-size: 10px;
-}
+// html {
+//   font-size: 10px;
+// }
 
 body {
   font-family: cocogoose, sans-seriff;
@@ -87,7 +87,6 @@ img {
 header {
   height: 5rem;
   // box-shadow: 0 2px 2px $color3;
-  color: $color1;
   display: flex;
   align-items: center;
   padding: 0 2rem;
@@ -95,6 +94,58 @@ header {
   .hamburger .icon {
     width: 3rem;
     height: 3rem;
+  }
+
+  nav {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: space-between;
+    @include on-desktop() {
+      justify-content: space-around;
+    }
+
+    ul {
+      display: flex;
+      gap: 1em;
+
+      li {
+        // background-color: yellowgreen;
+        padding: 0.8em;
+        font-family: cocogoose;
+        font-size: 0.8rem;
+        font-weight: 300;
+        a {
+          text-decoration: none;
+          font-weight: revert;
+        }
+        &:hover {
+          background-color: rgba($orange, 0.05);
+        }
+      }
+    }
+
+    .logo {
+      color: $color1;
+      text-decoration: none;
+    }
+
+    button {
+      border: 0.4em solid $orange;
+      background-color: $white;
+      padding: 0.6em 0.8em;
+      color: $orange;
+      font-family: cocogoose;
+      font-size: 0.8rem;
+      font-weight: 200;
+      transition: 40ms ease-in;
+      &:hover {
+        background-color: $orange;
+        color: white;
+        font-weight: 400;
+      }
+    }
+
   }
 
 }
@@ -182,6 +233,7 @@ footer {
     font-size: 1rem;
     font-weight: 400;
     line-height: 1;
+    color: $color1;
   }
 
   .right {

@@ -1,3 +1,5 @@
+@use 'color' as *;
+
 /* general classes */
 .flex {
   display: flex;
@@ -35,7 +37,7 @@ $spaces: (1,2,3,4,5,6,7,8);
 
 
 .box {
-  border: 1px solid #d3d3d3;
+  border: 1px solid $color3;
   background-color: white;
   border-radius: 0.2em;
 }

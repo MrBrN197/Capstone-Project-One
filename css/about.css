@@ -321,7 +321,6 @@ img {
 
 header {
   height: 5rem;
-  color: #272a31;
   display: flex;
   align-items: center;
   padding: 0 2rem;
@@ -329,6 +328,53 @@ header {
 header .hamburger .icon {
   width: 3rem;
   height: 3rem;
+}
+header nav {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: space-between;
+}
+@media screen and (min-width: 768px) {
+  header nav {
+    justify-content: space-around;
+  }
+}
+header nav ul {
+  display: flex;
+  gap: 1em;
+}
+header nav ul li {
+  padding: 0.8em;
+  font-family: cocogoose;
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+header nav ul li a {
+  text-decoration: none;
+  font-weight: revert;
+}
+header nav ul li:hover {
+  background-color: rgba(236, 82, 66, 0.05);
+}
+header nav .logo {
+  color: #272a31;
+  text-decoration: none;
+}
+header nav button {
+  border: 0.4em solid #ec5242;
+  background-color: #f5f5f8;
+  padding: 0.6em 0.8em;
+  color: #ec5242;
+  font-family: cocogoose;
+  font-size: 0.8rem;
+  font-weight: 200;
+  transition: 40ms ease-in;
+}
+header nav button:hover {
+  background-color: #ec5242;
+  color: white;
+  font-weight: 400;
 }
 
 main section .icon {
@@ -400,6 +446,7 @@ footer .left {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1;
+  color: #272a31;
 }
 footer .right {
   font-size: 0.7rem;
