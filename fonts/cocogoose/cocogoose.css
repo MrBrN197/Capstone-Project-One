@@ -3,77 +3,77 @@
 	font-style: normal;
 	font-weight: 900;
 	font-display: swap;
-	src: url("/fonts/cocogoose/Zetafonts - Cocogoose Pro Letterpress.ttf") format('truetype');
+	src: url("Zetafonts - Cocogoose Pro Letterpress.ttf") format('truetype');
 }
 @font-face {
 	font-family: 'cocogoose';
 	font-style: italic;
 	font-weight: 300;
 	font-display: swap;
-	src: url("/fonts/cocogoose/Zetafonts - Cocogoose Pro Light Italic.ttf") format('truetype');
+	src: url("Zetafonts - Cocogoose Pro Light Italic.ttf") format('truetype');
 }
 @font-face {
 	font-family: 'cocogoose';
 	font-style: normal;
 	font-weight: 300;
 	font-display: swap;
-	src: url("/fonts/cocogoose/Zetafonts - Cocogoose Pro Light.ttf") format('truetype');
+	src: url("Zetafonts - Cocogoose Pro Light.ttf") format('truetype');
 }
 @font-face {
 	font-family: 'cocogoose';
 	font-style: italic;
 	font-weight: 400;
 	font-display: swap;
-	src: url("/fonts/cocogoose/Zetafonts - Cocogoose Pro SemiLight Italic.ttf") format('truetype');
+	src: url("Zetafonts - Cocogoose Pro SemiLight Italic.ttf") format('truetype');
 }
 @font-face {
 	font-family: 'cocogoose';
 	font-style: normal;
 	font-weight: 400;
 	font-display: swap;
-	src: url("/fonts/cocogoose/Zetafonts - Cocogoose Pro SemiLight.ttf") format('truetype');
+	src: url("Zetafonts - Cocogoose Pro SemiLight.ttf") format('truetype');
 }
 @font-face {
 	font-family: 'cocogoose';
 	font-style: italic;
 	font-weight: 100;
 	font-display: swap;
-	src: url("/fonts/cocogoose/Zetafonts - Cocogoose Pro Thin Italic.ttf") format('truetype');
+	src: url("Zetafonts - Cocogoose Pro Thin Italic.ttf") format('truetype');
 }
 @font-face {
 	font-family: 'cocogoose';
 	font-style: normal;
 	font-weight: 100;
 	font-display: swap;
-	src: url("/fonts/cocogoose/Zetafonts - Cocogoose Pro Thin.ttf") format('truetype');
+	src: url("Zetafonts - Cocogoose Pro Thin.ttf") format('truetype');
 }
 @font-face {
 	font-family: 'cocogoose';
 	font-style: italic;
 	font-weight: 200;
 	font-display: swap;
-	src: url("/fonts/cocogoose/Zetafonts - Cocogoose Pro UltraLight Italic.ttf") format('truetype');
+	src: url("Zetafonts - Cocogoose Pro UltraLight Italic.ttf") format('truetype');
 }
 @font-face {
 	font-family: 'cocogoose';
 	font-style: normal;
 	font-weight: 200;
 	font-display: swap;
-	src: url("/fonts/cocogoose/Zetafonts - Cocogoose Pro UltraLight.ttf") format('truetype');
+	src: url("Zetafonts - Cocogoose Pro UltraLight.ttf") format('truetype');
 }
 @font-face {
 	font-family: 'cocogoose';
 	font-style: normal;
 	font-weight: 500;
 	font-display: swap;
-	src: url("/fonts/cocogoose/Zetafonts - CocogoosePro-Regular.ttf") format('truetype');
+	src: url("Zetafonts - CocogoosePro-Regular.ttf") format('truetype');
 }
 @font-face {
 	font-family: 'cocogoose';
 	font-style: italic;
 	font-weight: 500;
 	font-display: swap;
-	src: url("/fonts/cocogoose/Zetafonts - Cocogoose Pro Italic.ttf") format('truetype');
+	src: url("Zetafonts - Cocogoose Pro Italic.ttf") format('truetype');
 }
 
 /* @font-face {
@@ -81,40 +81,40 @@
 	font-style: normal;
 	font-weight: 0;
 	font-display: swap;
-	src: url("/fonts/cocogoose/Zetafonts - Cocogoose Pro Block Block Borde.ttf") format('truetype');
+	src: url("Zetafonts - Cocogoose Pro Block Block Borde.ttf") format('truetype');
 }
 @font-face {
 	font-family: 'cocogoose';
 	font-style: normal;
 	font-weight: 0;
 	font-display: swap;
-	src: url("/fonts/cocogoose/Zetafonts - Cocogoose Pro Block Block Gradi.ttf") format('truetype');
+	src: url("Zetafonts - Cocogoose Pro Block Block Gradi.ttf") format('truetype');
 }
 @font-face {
 	font-family: 'cocogoose';
 	font-style: normal;
 	font-weight: 0;
 	font-display: swap;
-	src: url("/fonts/cocogoose/Zetafonts - Cocogoose Pro Block Block Inner.ttf") format('truetype');
+	src: url("Zetafonts - Cocogoose Pro Block Block Inner.ttf") format('truetype');
 }
 @font-face {
 	font-family: 'cocogoose';
 	font-style: normal;
 	font-weight: 0;
 	font-display: swap;
-	src: url("/fonts/cocogoose/Zetafonts - Cocogoose Pro Block Block Shado.ttf") format('truetype');
+	src: url("Zetafonts - Cocogoose Pro Block Block Shado.ttf") format('truetype');
 }
 @font-face {
 	font-family: 'cocogoose';
 	font-style: normal;
 	font-weight: 0;
 	font-display: swap;
-	src: url("/fonts/cocogoose/Zetafonts - Cocogoose Pro Inline.ttf") format('truetype');
+	src: url("Zetafonts - Cocogoose Pro Inline.ttf") format('truetype');
 }
 @font-face {
 	font-family: 'cocogoose';
 	font-style: normal;
 	font-weight: 0;
 	font-display: swap;
-	src: url("/fonts/cocogoose/Zetafonts - Cocogoose Pro Outlined.ttf") format('truetype');
+	src: url("Zetafonts - Cocogoose Pro Outlined.ttf") format('truetype');
 } */
