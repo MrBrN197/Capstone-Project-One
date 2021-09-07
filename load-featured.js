@@ -39,7 +39,7 @@ const setupFeaturedSection = () => {
       heading: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti, necessitatibus.',
     },
     {
-      name: 'Oladimeji Odunsi',
+      name: 'Oladim Odunsi',
       image: 'https://images.unsplash.com/photo-1600873499830-2e2c3f2ebc67?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
       description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos minima nesciunt, facere odit repudiandae eveniet saepe sapiente!',
       heading: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti, necessitatibus.',
@@ -92,6 +92,6 @@ const setupFeaturedSection = () => {
     featureSection.appendChild(card);
   });
 };
-window.onload = () => {
+window.addEventListener('load', () => {
   setupFeaturedSection();
-};
+});

@@ -11,6 +11,6 @@ const initializeListeners = () => {
   });
 };
 
-window.onload = () => {
+window.addEventListener('load', () => {
   initializeListeners();
-};
+});
