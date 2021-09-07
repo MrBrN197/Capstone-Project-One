@@ -19,6 +19,21 @@
 }
 
 
+$spaces: (1,2,3,4,5,6,7,8);
+
+@each $space in $spaces {
+  .p-#{$space} {
+    padding: $space * 1rem;
+  }
+}
+
+@each $gap in $spaces {
+  .flex-gap-#{$gap} {
+    gap: $gap * 0.5rem;
+  }
+}
+
+
 .box {
   border: 1px solid #d3d3d3;
   background-color: white;

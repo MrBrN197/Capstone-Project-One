@@ -1,10 +1,14 @@
 @use 'global' as *;
 
+main section {
+	text-align: center;
+}
 
 .prev-summits {
+
 	.image {
-		width: 18rem;
-		height: 10rem;
+		width: 20rem;
+		height: 12rem;
 		background-color: yellowgreen; @warn("TODO: remove this");
 		position: relative;
 
@@ -20,6 +24,7 @@
 		} 
 
 		.image-text {
+			font-family: cocogoose;
 			position: absolute;
 			top: 0;
 			bottom: 0;
@@ -29,11 +34,13 @@
 
 			.heading {
 				font-size: 2rem;
-				font-weight: bold;
+				font-weight: 400;
+				margin-bottom: 0.5em;
 			}
 			
 			.description {
-
+				font-weight: 300;
+				text-align: center;
 			}
 		}
 	}
@@ -52,12 +59,43 @@ section.partner {
 	ul li {
 		display: block;
 		filter: grayscale(100%) contrast(30%);
+		height: 2rem;
 	}
 
 	ul li img {
-		height: 3rem;
 		object-fit: contain;
 		// padding: 1rem;
 		// box-sizing: content-box;
+	}
+}
+
+
+.copyright-box {
+	padding: 1rem;
+	gap: 1rem;
+	width: 100%;
+
+	.icon {
+		width: 4rem;
+		height: 4rem;
+	}
+
+	.copyright-text {
+		line-height: 1.1;
+	}
+
+	.copyright-text p:nth-child(1) {
+		font-size: 2rem;
+		letter-spacing: 0.25rem;
+	}
+
+	.copyright-text p:nth-child(2) {
+		font-size: 1.5rem;
+		letter-spacing: 0.2rem;
+	}
+	.copyright-text p:nth-child(3) {
+		font-size: 0.7rem;
+		letter-spacing: 0;
+		line-height: 1.8;
 	}
 }

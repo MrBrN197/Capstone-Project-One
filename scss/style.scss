@@ -1,8 +1,18 @@
 @use 'global' as *;
 
-.welcome {
+section.welcome {
   align-items: flex-start;
-  color: $color1;
+
+  > * {
+    width: 30rem;
+  }
+
+  .white-box {
+    border: 0.3em solid white;
+    padding: 1em;
+    // background-color: yellowgreen;
+  }
+
 }
 
 .more-button {
@@ -12,8 +22,11 @@
   width: 100%;
   padding: 1rem 0;
   gap: 0.4rem;
+  font-weight: 400;
+  .icon {
+    color: $orange;
+  }
 }
-
 
 section.main-program {
   background-color: #272a31;
@@ -26,6 +39,12 @@ section.main-program {
   button {
     background-color: #ec5242;
     color: white;
+  }
+
+  .card-container {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
 }
@@ -41,27 +60,35 @@ section.main-program .card {
   background-color: rgba($white, 0.1);
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  // justify-content: space-between;
   padding: 1rem;
-  gap: 2rem;
-  width: 100%;
+  gap: 1rem;
+  min-width: 100%;
   border-radius: 0.1em;
 
+  @media screen and (min-width: 768px) {
+    flex-direction: column;
+    max-width: 14rem;
+    min-width: 0;
+    text-align: center;
+  }
+  
   .icon {
-    width: 4rem;
-    height: 4rem;
+    width: 3rem;
+    height: 3rem;
     flex: 0 0 auto;
   }
   .description {
     color: white;
     font-size: 0.8rem;
     line-height: 1.5;
+    flex-basis: 60%;
   }
   .heading {
     font-size: 1.4rem;
     color: #ec5242;
     font-weight: bold;
-    width: 10rem;
+    min-width: 10rem;
   }
 }
 
@@ -81,8 +108,8 @@ section.featured-speakers .card {
   border-radius: 0.1em;
 
   .image {
-    width: 10rem;
-    height: 10rem;
+    width: 8rem;
+    height: 8rem;
   }
 
   .image-container {

@@ -1,7 +1,3 @@
-.bold {
-  font-weight: bold;
-}
-
 .fw-1 {
   font-weight: 100;
 }
@@ -43,11 +39,11 @@
 }
 
 .text-small {
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
 
 .text-medium {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
 }
 
 .text-large {
@@ -55,7 +51,15 @@
 }
 
 .text-xlarge {
-  font-size: 1.75rem;
+  font-size: 2rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.bold {
+  font-weight: bold;
 }
 
 .text-dbar {
@@ -78,13 +82,101 @@
   bottom: 0;
 }
 
+.w-10 {
+  width: 10%;
+}
+
+.w-20 {
+  width: 20%;
+}
+
+.w-30 {
+  width: 30%;
+}
+
+.w-40 {
+  width: 40%;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.w-60 {
+  width: 60%;
+}
+
+.w-70 {
+  width: 70%;
+}
+
+.w-80 {
+  width: 80%;
+}
+
+.w-90 {
+  width: 90%;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.h-10 {
+  height: 10%;
+}
+
+.h-20 {
+  height: 20%;
+}
+
+.h-30 {
+  height: 30%;
+}
+
+.h-40 {
+  height: 40%;
+}
+
+.h-50 {
+  height: 50%;
+}
+
+.h-60 {
+  height: 60%;
+}
+
+.h-70 {
+  height: 70%;
+}
+
+.h-80 {
+  height: 80%;
+}
+
+.h-90 {
+  height: 90%;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.c-box {
+  box-sizing: content-box;
+}
+
+.b-box {
+  box-sizing: border-box;
+}
+
 /* general classes */
 .flex, .more-button {
   display: flex;
   flex-direction: row;
 }
 
-.flex-column, section, .card-container {
+.flex-column, main section, .card-container {
   display: flex;
   flex-direction: column;
 }
@@ -93,9 +185,73 @@
   flex-wrap: wrap;
 }
 
-.flex-center, section, .more-button {
+.flex-center, main section, .more-button {
   align-items: center;
   justify-content: center;
+}
+
+.p-1 {
+  padding: 1rem;
+}
+
+.p-2 {
+  padding: 2rem;
+}
+
+.p-3 {
+  padding: 3rem;
+}
+
+.p-4 {
+  padding: 4rem;
+}
+
+.p-5 {
+  padding: 5rem;
+}
+
+.p-6 {
+  padding: 6rem;
+}
+
+.p-7 {
+  padding: 7rem;
+}
+
+.p-8 {
+  padding: 8rem;
+}
+
+.flex-gap-1 {
+  gap: 0.5rem;
+}
+
+.flex-gap-2 {
+  gap: 1rem;
+}
+
+.flex-gap-3 {
+  gap: 1.5rem;
+}
+
+.flex-gap-4 {
+  gap: 2rem;
+}
+
+.flex-gap-5 {
+  gap: 2.5rem;
+}
+
+.flex-gap-6 {
+  gap: 3rem;
+}
+
+.flex-gap-7 {
+  gap: 3.5rem;
+}
+
+.flex-gap-8 {
+  gap: 4rem;
 }
 
 .box, .more-button {
@@ -113,7 +269,8 @@
 body {
   font-family: cocogoose, sans-seriff;
   font-family: Lato, sans-seriff;
-  background-color: #f8f8f8;
+  background-color: #f5f5f8;
+  color: #545b6a;
 }
 
 ul {
@@ -122,7 +279,9 @@ ul {
 
 a {
   display: block;
-  text-decoration: none;
+  text-decoration: underline;
+  font-weight: bold;
+  color: inherit;
 }
 
 button {
@@ -146,45 +305,54 @@ img {
 .icon {
   width: 2em;
   height: 2em;
-  background-color: crimson;
 }
 
 header {
-  height: 4rem;
-  box-shadow: 0 2px 2px #d3d3d3;
-}
-
-header {
+  height: 5rem;
+  color: #272a31;
   display: flex;
   align-items: center;
+  padding: 0 2rem;
+}
+header .hamburger .icon {
+  width: 3rem;
+  height: 3rem;
+}
+
+main section .icon {
+  color: #f5f5f8;
 }
 
 main section + section {
   border-top: 1px solid #d3d3d3;
+  margin-top: 8rem;
 }
 
-section {
+main section {
   padding: 1rem;
   gap: 2rem;
 }
-section h1 .sub-heading {
+main section h1 .sub-heading {
   color: #ec5242;
   font-size: 1.5rem;
+  font-family: Lato;
 }
-section h1 {
+main section h1 {
   color: #ec5242;
-  font-size: 3.5rem;
+  font-size: 2.5rem;
+  font-weight: 900;
+  font-family: cocogoose;
 }
-section h2 {
+main section h2 {
   position: relative;
-  width: max-content;
+  text-align: center;
 }
-section h2::after {
+main section h2::after {
   bottom: 0;
   content: "";
   display: block;
   height: 0.1em;
-  width: 2em;
+  width: 1.5em;
   border-radius: 0.05em;
   margin: 0 auto;
   margin-top: 0.8em;
@@ -195,12 +363,18 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  align-items: center;
   padding: 4rem 0;
+  font-family: "cocogoose";
 }
 footer .left {
-  font-size: 1.4rem;
-  font-weight: bold;
+  font-size: 1rem;
+  font-weight: 400;
   line-height: 1;
+}
+footer .right {
+  font-size: 0.7rem;
+  font-weight: 200;
 }
 
 section.featured-speakers .card .content .heading::after {
@@ -209,15 +383,25 @@ section.featured-speakers .card .content .heading::after {
   position: absolute;
 }
 
-.welcome {
+section.welcome {
   align-items: flex-start;
-  color: #272a31;
+}
+section.welcome > * {
+  width: 30rem;
+}
+section.welcome .white-box {
+  border: 0.3em solid white;
+  padding: 1em;
 }
 
 .more-button {
   width: 100%;
   padding: 1rem 0;
   gap: 0.4rem;
+  font-weight: 400;
+}
+.more-button .icon {
+  color: #ec5242;
 }
 
 section.main-program {
@@ -225,11 +409,16 @@ section.main-program {
   background-image: url("../images/icons/x.svg");
 }
 section.main-program h2 {
-  color: #f8f8f8;
+  color: #f5f5f8;
 }
 section.main-program button {
   background-color: #ec5242;
   color: white;
+}
+section.main-program .card-container {
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .card-container {
@@ -239,30 +428,38 @@ section.main-program button {
 }
 
 section.main-program .card {
-  background-color: rgba(248, 248, 248, 0.1);
+  background-color: rgba(245, 245, 248, 0.1);
   display: flex;
   align-items: center;
-  justify-content: space-between;
   padding: 1rem;
-  gap: 2rem;
-  width: 100%;
+  gap: 1rem;
+  min-width: 100%;
   border-radius: 0.1em;
 }
+@media screen and (min-width: 768px) {
+  section.main-program .card {
+    flex-direction: column;
+    max-width: 14rem;
+    min-width: 0;
+    text-align: center;
+  }
+}
 section.main-program .card .icon {
-  width: 4rem;
-  height: 4rem;
+  width: 3rem;
+  height: 3rem;
   flex: 0 0 auto;
 }
 section.main-program .card .description {
   color: white;
   font-size: 0.8rem;
   line-height: 1.5;
+  flex-basis: 60%;
 }
 section.main-program .card .heading {
   font-size: 1.4rem;
   color: #ec5242;
   font-weight: bold;
-  width: 10rem;
+  min-width: 10rem;
 }
 
 section.featured-speakers .card-container {
@@ -271,7 +468,7 @@ section.featured-speakers .card-container {
 
 section.featured-speakers .card {
   display: flex;
-  background-color: rgba(248, 248, 248, 0.1);
+  background-color: rgba(245, 245, 248, 0.1);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -281,8 +478,8 @@ section.featured-speakers .card {
   border-radius: 0.1em;
 }
 section.featured-speakers .card .image {
-  width: 10rem;
-  height: 10rem;
+  width: 8rem;
+  height: 8rem;
 }
 section.featured-speakers .card .image-container {
   background-image: url("../images/checkerboard.png");
