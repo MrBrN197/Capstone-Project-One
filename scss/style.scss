@@ -108,14 +108,14 @@ section.main-program .card {
   }
 }
 
-section.featured-speakers .card-container {
+section.featured .card-container {
   @extend .flex;
   flex-wrap: wrap;
   // gap: 0.2rem;
 }
 
 
-section.featured-speakers .card {
+section.featured .card {
   display: flex;
   background-color: rgba($white, 0.1);
   display: flex;

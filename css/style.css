@@ -171,7 +171,7 @@
 }
 
 /* general classes */
-.flex, .more-button, section.featured-speakers .card-container {
+.flex, .more-button, section.featured .card-container {
   display: flex;
   flex-direction: row;
 }
@@ -488,7 +488,7 @@ footer .right {
   text-decoration: none;
 }
 
-section.featured-speakers .card .content .heading::after {
+section.featured .card .content .heading::after {
   display: block;
   content: "";
   position: absolute;
@@ -590,11 +590,11 @@ section.main-program .card .heading {
   min-width: 10rem;
 }
 
-section.featured-speakers .card-container {
+section.featured .card-container {
   flex-wrap: wrap;
 }
 
-section.featured-speakers .card {
+section.featured .card {
   display: flex;
   background-color: rgba(245, 245, 248, 0.1);
   display: flex;
@@ -605,28 +605,28 @@ section.featured-speakers .card {
   border-radius: 0.1em;
 }
 @media screen and (min-width: 768px) {
-  section.featured-speakers .card {
+  section.featured .card {
     width: 50%;
   }
 }
-section.featured-speakers .card .image {
+section.featured .card .image {
   width: 8rem;
   height: 8rem;
 }
-section.featured-speakers .card .image-container {
+section.featured .card .image-container {
   background-image: url("../images/checkerboard.png");
   background-size: 40%;
   background-repeat: no-repeat;
   position: relative;
 }
-section.featured-speakers .card .image-container img {
+section.featured .card .image-container img {
   position: absolute;
   width: 90%;
   height: 90%;
   bottom: 0;
   right: 0;
 }
-section.featured-speakers .card .content .heading {
+section.featured .card .content .heading {
   font-style: italic;
   color: #ec5242;
   position: relative;
@@ -634,7 +634,7 @@ section.featured-speakers .card .content .heading {
   padding-top: 0.5em;
   margin-bottom: 1em;
 }
-section.featured-speakers .card .content .heading::after {
+section.featured .card .content .heading::after {
   bottom: 0;
   left: 0;
   height: 0.2em;
