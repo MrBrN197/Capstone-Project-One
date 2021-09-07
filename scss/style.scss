@@ -1,4 +1,7 @@
-@use 'global' as *;
+
+@use 'color' as *;
+@use 'text' as *;
+@use 'classes' as *;
 
 section.welcome {
   align-items: flex-start;
@@ -17,17 +20,18 @@ section.welcome {
     margin-left: 14vw;
     margin-right: 14vw;
   }
-
 }
 
 .more-button {
   @extend .box;
   @extend .flex;
   @extend .flex-center;
+
   width: 100%;
   padding: 1rem 0;
   gap: 0.4rem;
   font-weight: 400;
+
   .icon {
     color: $orange;
   }
@@ -52,21 +56,18 @@ section.main-program {
     font-weight: normal;
     padding: 2rem 0;
   }
-
-  .card-container {
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
 }
 
 section.main-program .card-container {
   @extend .flex-column;
+
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
   align-items: center;
   gap: 0.8rem;
   width: 100%;
-  
+
   @include on-desktop {
     gap: 0.2em;
   }
@@ -94,12 +95,14 @@ section.main-program .card {
     height: 3rem;
     flex: 0 0 auto;
   }
+
   .description {
     color: white;
     font-size: 0.8rem;
     line-height: 1.5;
     flex-basis: 60%;
   }
+
   .heading {
     font-size: 1.4rem;
     color: $orange;
@@ -110,15 +113,13 @@ section.main-program .card {
 
 section.featured .card-container {
   @extend .flex;
-  flex-wrap: wrap;
-  // gap: 0.2rem;
-}
 
+  flex-wrap: wrap;
+}
 
 section.featured .card {
   display: flex;
   background-color: rgba($white, 0.1);
-  display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
@@ -138,8 +139,8 @@ section.featured .card {
     background-image: url("../images/checkerboard.png");
     background-size: 40%;
     background-repeat: no-repeat;
-
     position: relative;
+
     img {
       position: absolute;
       width: 90%;
@@ -159,10 +160,11 @@ section.featured .card {
       padding-bottom: 1.2em;
       padding-top: 0.5em;
       margin-bottom: 1em;
-
     }
+
     .heading::after {
-      @extend %pseudo;
+      @include pseudo;
+
       bottom: 0;
       left: 0;
       height: 0.2em;

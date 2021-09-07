@@ -1,90 +1,91 @@
-@use 'global' as *;
+@use 'color' as *;
+@use 'text' as *;
+@use 'classes' as *;
 
 main section {
-	text-align: center;
+  text-align: center;
 }
 
 section.welcome {
-	@include on-desktop {
-		margin-left: 6rem;
-		margin-right: 6rem;
-	}
+  @include on-desktop {
+    margin-left: 6rem;
+    margin-right: 6rem;
+  }
 }
 
 .prev-summits {
+  .image {
+    width: 20rem;
+    height: 12rem;
+    position: relative;
 
-	.image {
-		width: 20rem;
-		height: 12rem;
-		background-color: yellowgreen; @warn("TODO: remove this");
-		position: relative;
+    &::before {
+      position: absolute;
+      content: "";
+      display: block;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(darken($orange, 8%), 0.6);
+    }
 
-		&::before {
-			position: absolute; @warn("TODO: make dry");
-			content: "";
-			display: block;
-			top: 0;
-			bottom: 0;
-			left: 0;
-			right: 0;
-			background-color: rgba(darken($orange, 8%), 0.6);
-		} 
+    .image-text {
+      font-family: cocogoose, sans-serif;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      color: $white;
 
-		.image-text {
-			font-family: cocogoose;
-			position: absolute;
-			top: 0;
-			bottom: 0;
-			left: 0;
-			right: 0;
-			color: $white;
+      .heading {
+        font-size: 2rem;
+        font-weight: 400;
+        margin-bottom: 0.5em;
+      }
 
-			.heading {
-				font-size: 2rem;
-				font-weight: 400;
-				margin-bottom: 0.5em;
-			}
-			
-			.description {
-				font-weight: 300;
-				text-align: center;
-			}
-		}
-	}
+      .description {
+        font-weight: 300;
+        text-align: center;
+      }
+    }
+  }
 }
 
 .copyright-box {
-	padding: 1rem;
-	gap: 1rem;
-	width: 100%;
+  padding: 1rem;
+  gap: 1rem;
+  width: 100%;
 
-	@include on-desktop {
-		width: unset;
-	}
+  @include on-desktop {
+    width: unset;
+  }
 
-	.icon {
-		width: 4rem;
-		height: 4rem;
-	}
+  .icon {
+    width: 4rem;
+    height: 4rem;
+  }
 
-	.copyright-text {
-		line-height: 1.1;
-	}
+  .copyright-text {
+    line-height: 1.1;
+  }
 
-	.copyright-text p:nth-child(1) {
-		font-size: 2rem;
-		letter-spacing: 0.25rem;
-		color: $color1;
-	}
+  .copyright-text p:nth-child(1) {
+    font-size: 2rem;
+    letter-spacing: 0.25rem;
+    color: $color1;
+  }
 
-	.copyright-text p:nth-child(2) {
-		font-size: 1.5rem;
-		letter-spacing: 0.2rem;
-		color: $color1;
-	}
-	.copyright-text p:nth-child(3) {
-		font-size: 0.7rem;
-		letter-spacing: 0;
-		line-height: 1.8;
-	}
+  .copyright-text p:nth-child(2) {
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+    color: $color1;
+  }
+
+  .copyright-text p:nth-child(3) {
+    font-size: 0.7rem;
+    letter-spacing: 0;
+    line-height: 1.8;
+  }
 }

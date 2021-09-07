@@ -20,7 +20,6 @@
   justify-content: center;
 }
 
-
 $spaces: (1,2,3,4,5,6,7,8);
 
 @each $space in $spaces {
@@ -35,9 +34,38 @@ $spaces: (1,2,3,4,5,6,7,8);
   }
 }
 
-
 .box {
   border: 1px solid $color3;
   background-color: white;
   border-radius: 0.2em;
+}
+
+@mixin on-desktop {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin on-mobile {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+.mobile-only {
+  @include on-desktop {
+    display: none;
+  }
+}
+
+.desktop-only {
+  @include on-mobile {
+    display: none;
+  }
+}
+
+@mixin pseudo {
+  display: block;
+  content: "";
+  position: absolute;
 }

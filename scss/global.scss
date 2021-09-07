@@ -1,36 +1,6 @@
-
-@forward 'color';
-@forward 'text';
-@forward 'classes';
-
 @use 'color' as *;
 @use 'text' as *;
 @use 'classes' as *;
-
-
-@mixin on-desktop {
-  @media screen and (min-width: 768px) {
-    @content
-  }
-}
-
-@mixin on-mobile {
-  @media screen and (max-width: 767px) {
-    @content
-  }
-}
-
-.mobile-only {
-  @include on-desktop {
-    display: none;
-  }
-}
-
-.desktop-only {
-  @include on-mobile {
-    display: none;
-  }
-}
 
 * {
   padding: 0;
@@ -43,8 +13,8 @@
 // }
 
 body {
-  font-family: cocogoose, sans-seriff;
-  font-family: Lato, sans-seriff;
+  font-family: cocogoose, sans-serif;
+  font-family: Lato, sans-serif;
   background-color: $white;
   color: lighten($color1, 20%);
 }
@@ -81,7 +51,10 @@ img {
 .icon {
   width: 2em;
   height: 2em;
-  // background-color: crimson;  @warn('TODO: remove this background-color');
+}
+
+main section .icon {
+  color: $white;
 }
 
 header {
@@ -101,6 +74,7 @@ header {
     flex-grow: 1;
     align-items: center;
     justify-content: space-between;
+
     @include on-desktop() {
       justify-content: space-around;
     }
@@ -108,21 +82,22 @@ header {
     ul {
       display: flex;
       gap: 1em;
+    }
 
-      li {
-        // background-color: yellowgreen;
-        padding: 0.8em;
-        font-family: cocogoose;
-        font-size: 0.8rem;
-        font-weight: 300;
-        a {
-          text-decoration: none;
-          font-weight: revert;
-        }
-        &:hover {
-          background-color: rgba($orange, 0.05);
-        }
-      }
+    li {
+      padding: 0.8em;
+      font-family: cocogoose, sans-serif;
+      font-size: 0.8rem;
+      font-weight: 300;
+    }
+
+    a {
+      text-decoration: none;
+      font-weight: unset;
+    }
+
+    li:hover {
+      background-color: rgba($orange, 0.05);
     }
 
     .logo {
@@ -135,28 +110,18 @@ header {
       background-color: $white;
       padding: 0.6em 0.8em;
       color: $orange;
-      font-family: cocogoose;
+      font-family: cocogoose, sans-serif;
       font-size: 0.8rem;
       font-weight: 200;
       transition: 40ms ease-in;
+
       &:hover {
         background-color: $orange;
         color: white;
         font-weight: 400;
       }
     }
-
   }
-
-}
-
-main section .icon  {
-  color: $white;
-}
-
-main section + section {
-  border-top: 1px solid $color3;
-  margin-top: 8rem;
 }
 
 main section {
@@ -169,22 +134,23 @@ main section {
   h1 .sub-heading {
     color: $orange;
     font-size: 1.5rem;
-    font-family: Lato;
+    font-family: Lato, sans-serif;
   }
 
   h1 {
     color: $orange;
     font-size: 2.5rem;
     font-weight: 900;
-    font-family: cocogoose;
+    font-family: cocogoose, sans-serif;
   }
 
   h2 {
     text-align: center;
-  } 
+  }
 
   h2::after {
     $h: 0.1em;
+
     bottom: 0;
     content: "";
     display: block;
@@ -195,28 +161,33 @@ main section {
     margin-top: 0.8em;
     background-color: $orange;
   }
-} 
+}
+
+main section + section {
+  border-top: 1px solid $color3;
+  margin-top: 8rem;
+}
 
 section.partner {
-	background-color: lighten($color1, 5%);
-	color: $white;
+  background-color: lighten($color1, 5%);
+  color: $white;
 
-	ul {
-		gap: 2rem;
-		padding: 2rem;
-	}
+  ul {
+    gap: 2rem;
+    padding: 2rem;
+  }
 
-	ul li {
-		display: block;
-		filter: grayscale(100%) contrast(30%);
-		height: 2rem;
-	}
+  ul li {
+    display: block;
+    filter: grayscale(100%) contrast(30%);
+    height: 2rem;
+  }
 
-	ul li img {
-		object-fit: contain;
-		// padding: 1rem;
-		// box-sizing: content-box;
-	}
+  ul li img {
+    object-fit: contain;
+    // padding: 1rem;
+    // box-sizing: content-box;
+  }
 }
 
 footer {
@@ -224,11 +195,10 @@ footer {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  
   padding: 4rem 0;
-  font-family: "cocogoose";
+  font-family: cocogoose, sans-serif;
 
-  .left  {
+  .left {
     font-size: 1rem;
     font-weight: 400;
     line-height: 1;
@@ -240,7 +210,6 @@ footer {
     font-weight: 200;
   }
 }
-
 
 #mobile-menu {
   position: fixed;
@@ -275,16 +244,10 @@ footer {
       display: block;
       background-color: rgba($orange, 0.15);
       color: $orange;
+
       a {
         text-decoration: none;
       }
     }
   }
-
-}
-
-%pseudo {
-  display: block;
-  content: "";
-  position: absolute;
 }
