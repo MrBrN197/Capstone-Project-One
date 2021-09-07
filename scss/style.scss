@@ -13,6 +13,11 @@ section.welcome {
     // background-color: yellowgreen;
   }
 
+  @include on-desktop {
+    margin-left: 14vw;
+    margin-right: 14vw;
+  }
+
 }
 
 .more-button {
