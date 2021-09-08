@@ -1,5 +1,7 @@
 const setupFeaturedSection = () => {
-  const featureSection = document.querySelector('#featured-section .card-container');
+  const featureSection = document.querySelector('#featured-section');
+  const cardContainer = featureSection.querySelector('.card-container');
+  const moreBtn = featureSection.querySelector('.more-button');
 
   const artists = [
     {
@@ -87,9 +89,18 @@ const setupFeaturedSection = () => {
     return card;
   };
 
-  artists.forEach((artist) => {
+  const index = 4;
+  artists.slice(0, index).forEach((artist) => {
     const card = createCard(artist);
-    featureSection.appendChild(card);
+    cardContainer.appendChild(card);
+  });
+
+  moreBtn.addEventListener('click', () => {
+    artists.slice(index).forEach((artist) => {
+      const card = createCard(artist);
+      cardContainer.appendChild(card);
+    });
+    moreBtn.remove();
   });
 };
 window.addEventListener('load', () => {
