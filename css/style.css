@@ -67,9 +67,7 @@
   width: fit-content;
   width: -moz-fit-content;
 }
-
-.text-dbar::before,
-.text-dbar::after {
+.text-dbar::before, .text-dbar::after {
   position: absolute;
   content: "";
   display: block;
@@ -77,11 +75,9 @@
   width: 100%;
   background-color: #d3d3d3;
 }
-
 .text-dbar::before {
   top: 0;
 }
-
 .text-dbar::after {
   bottom: 0;
 }
@@ -175,15 +171,12 @@
 }
 
 /* general classes */
-.flex,
-.more-button,
-section.featured .card-container {
+.flex, .more-button, section.featured .card-container {
   display: flex;
   flex-direction: row;
 }
 
-.flex-column,
-section.main-program .card-container {
+.flex-column, section.main-program .card-container {
   display: flex;
   flex-direction: column;
 }
@@ -192,8 +185,7 @@ section.main-program .card-container {
   flex-wrap: wrap;
 }
 
-.flex-center,
-.more-button {
+.flex-center, .more-button {
   align-items: center;
   justify-content: center;
 }
@@ -262,8 +254,7 @@ section.main-program .card-container {
   gap: 4rem;
 }
 
-.box,
-.more-button {
+.box, .more-button {
   border: 1px solid #d3d3d3;
   background-color: white;
   border-radius: 0.2em;
@@ -284,16 +275,13 @@ section.main-program .card-container {
 section.welcome {
   align-items: flex-start;
 }
-
 section.welcome > * {
   max-width: 30rem;
 }
-
 section.welcome .white-box {
   border: 0.3em solid white;
   padding: 1em;
 }
-
 @media screen and (min-width: 768px) {
   section.welcome {
     margin-left: 14vw;
@@ -307,7 +295,6 @@ section.welcome .white-box {
   gap: 0.4rem;
   font-weight: 400;
 }
-
 .more-button .icon {
   color: #ec5242;
 }
@@ -316,16 +303,13 @@ section.main-program {
   background-color: #272a31;
   background-image: url("../images/icons/x.svg");
 }
-
 section.main-program h2 {
   color: #f5f5f8;
 }
-
 section.main-program button {
   background-color: #ec5242;
   color: white;
 }
-
 section.main-program a {
   text-transform: uppercase;
   color: #f5f5f8;
@@ -341,7 +325,6 @@ section.main-program .card-container {
   gap: 0.8rem;
   width: 100%;
 }
-
 @media screen and (min-width: 768px) {
   section.main-program .card-container {
     gap: 0.2em;
@@ -357,7 +340,6 @@ section.main-program .card {
   min-width: 100%;
   border-radius: 0.1em;
 }
-
 @media screen and (min-width: 768px) {
   section.main-program .card {
     flex-direction: column;
@@ -366,20 +348,17 @@ section.main-program .card {
     text-align: center;
   }
 }
-
 section.main-program .card .icon {
   width: 3rem;
   height: 3rem;
   flex: 0 0 auto;
 }
-
 section.main-program .card .description {
   color: white;
   font-size: 0.8rem;
   line-height: 1.5;
   flex-basis: 60%;
 }
-
 section.main-program .card .heading {
   font-size: 1.4rem;
   color: #ec5242;
@@ -400,25 +379,21 @@ section.featured .card {
   gap: 2rem;
   border-radius: 0.1em;
 }
-
 @media screen and (min-width: 768px) {
   section.featured .card {
     width: 50%;
   }
 }
-
 section.featured .card .image {
   width: 8rem;
   height: 8rem;
 }
-
 section.featured .card .image-container {
   background-image: url("../images/checkerboard.png");
   background-size: 40%;
   background-repeat: no-repeat;
   position: relative;
 }
-
 section.featured .card .image-container img {
   position: absolute;
   width: 90%;
@@ -426,7 +401,6 @@ section.featured .card .image-container img {
   bottom: 0;
   right: 0;
 }
-
 section.featured .card .content .heading {
   font-style: italic;
   color: #ec5242;
@@ -435,7 +409,6 @@ section.featured .card .content .heading {
   padding-top: 0.5em;
   margin-bottom: 1em;
 }
-
 section.featured .card .content .heading::after {
   display: block;
   content: "";
@@ -446,3 +419,5 @@ section.featured .card .content .heading::after {
   width: 2em;
   background-color: #d3d3d3;
 }
+
+/*# sourceMappingURL=style.css.map */

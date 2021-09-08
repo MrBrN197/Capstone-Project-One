@@ -67,9 +67,7 @@
   width: fit-content;
   width: -moz-fit-content;
 }
-
-.text-dbar::before,
-.text-dbar::after {
+.text-dbar::before, .text-dbar::after {
   position: absolute;
   content: "";
   display: block;
@@ -77,11 +75,9 @@
   width: 100%;
   background-color: #d3d3d3;
 }
-
 .text-dbar::before {
   top: 0;
 }
-
 .text-dbar::after {
   bottom: 0;
 }
@@ -180,8 +176,7 @@
   flex-direction: row;
 }
 
-.flex-column,
-main section {
+.flex-column, main section {
   display: flex;
   flex-direction: column;
 }
@@ -190,8 +185,7 @@ main section {
   flex-wrap: wrap;
 }
 
-.flex-center,
-main section {
+.flex-center, main section {
   align-items: center;
   justify-content: center;
 }
@@ -332,7 +326,6 @@ main section .icon {
 header a {
   padding: 0 1em;
 }
-
 header .banner {
   font-size: 0.8rem;
   background-color: #272a31;
@@ -343,11 +336,9 @@ header .banner {
   justify-content: flex-end;
   padding: 1rem 3rem;
 }
-
 header .banner .icon {
   box-sizing: content-box;
 }
-
 header nav {
   display: flex;
   flex-grow: 1;
@@ -355,43 +346,35 @@ header nav {
   justify-content: space-between;
   padding: 1rem;
 }
-
 @media screen and (min-width: 768px) {
   header nav {
     justify-content: space-around;
   }
 }
-
 header nav .hamburger .icon {
   width: 3rem;
   height: 3rem;
 }
-
 header nav ul {
   display: flex;
   gap: 1em;
 }
-
 header nav li {
   padding: 0.8em;
   font-family: cocogoose, sans-serif;
   font-size: 0.8rem;
   font-weight: 300;
 }
-
 header nav a {
   font-weight: unset;
 }
-
 header nav li:hover {
   background-color: rgba(236, 82, 66, 0.05);
 }
-
 header nav .logo {
   color: #272a31;
   text-decoration: none;
 }
-
 header nav button {
   border: 0.4em solid #ec5242;
   background-color: #f5f5f8;
@@ -402,7 +385,6 @@ header nav button {
   font-weight: 200;
   transition: 40ms ease-in;
 }
-
 header nav button:hover {
   background-color: #ec5242;
   color: white;
@@ -413,24 +395,20 @@ main section {
   padding: 1rem;
   gap: 2rem;
 }
-
 main section h1 .sub-heading {
   color: #ec5242;
   font-size: 1.5rem;
   font-family: Lato, sans-serif;
 }
-
 main section h1 {
   color: #ec5242;
   font-size: 2.5rem;
   font-weight: 900;
   font-family: cocogoose, sans-serif;
 }
-
 main section h2 {
   text-align: center;
 }
-
 main section h2::after {
   bottom: 0;
   content: "";
@@ -452,18 +430,15 @@ section.partner {
   background-color: #32363f;
   color: #f5f5f8;
 }
-
 section.partner ul {
   gap: 2rem;
   padding: 2rem;
 }
-
 section.partner ul li {
   display: block;
   filter: grayscale(100%) contrast(30%);
   height: 2rem;
 }
-
 section.partner ul li img {
   object-fit: contain;
 }
@@ -477,20 +452,17 @@ footer {
   font-family: cocogoose, sans-serif;
   color: #272a31;
 }
-
 @media screen and (min-width: 768px) {
   footer {
     background-color: #272a31;
     color: #f5f5f8;
   }
 }
-
 footer .left {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1;
 }
-
 footer .right {
   font-size: 0.7rem;
   font-weight: 200;
@@ -506,7 +478,6 @@ footer .right {
   display: none;
   z-index: 1;
 }
-
 #mobile-menu .close-btn {
   height: 3rem;
   width: 3rem;
@@ -515,7 +486,6 @@ footer .right {
   box-sizing: content-box;
   color: #ec5242;
 }
-
 #mobile-menu ul {
   display: flex;
   flex-direction: column;
@@ -524,14 +494,14 @@ footer .right {
   font-size: 1.6rem;
   margin: 2rem;
 }
-
 #mobile-menu ul li {
   padding: 0.2em;
   display: block;
   background-color: rgba(236, 82, 66, 0.15);
   color: #ec5242;
 }
-
 #mobile-menu ul li a {
   text-decoration: none;
 }
+
+/*# sourceMappingURL=global.css.map */
