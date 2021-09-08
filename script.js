@@ -3,11 +3,11 @@ const initializeListeners = () => {
   const mobileMenu = document.getElementById('mobile-menu');
   const closeBtn = mobileMenu.querySelector('.close-btn');
   closeBtn.addEventListener('click', () => {
-    mobileMenu.style.display = 'none';
+    mobileMenu.classList.remove('active');
   });
 
   hamburger.addEventListener('click', () => {
-    mobileMenu.style.display = 'block';
+    mobileMenu.classList.add('active');
   });
 };
 

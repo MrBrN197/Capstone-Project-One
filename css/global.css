@@ -499,12 +499,16 @@ footer .right {
 #mobile-menu {
   position: fixed;
   top: 0;
-  left: 0;
+  left: -12rem;
   bottom: 0;
-  right: 0;
+  width: 12rem;
   background-color: #272a31;
-  display: none;
   z-index: 1;
+  transition: all 200ms linear;
+}
+
+#mobile-menu.active {
+  transform: translateX(12rem);
 }
 
 #mobile-menu .close-btn {

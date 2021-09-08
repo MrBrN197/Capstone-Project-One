@@ -235,14 +235,20 @@ footer {
 }
 
 #mobile-menu {
+  $modalWidth: 12rem;
+
   position: fixed;
   top: 0;
-  left: 0;
+  left: -$modalWidth;
   bottom: 0;
-  right: 0;
+  width: $modalWidth;
   background-color: $color1;
-  display: none;
   z-index: 1;
+  transition: all 200ms linear;
+
+  &.active {
+    transform: translateX($modalWidth);
+  }
 
   .close-btn {
     height: 3rem;
