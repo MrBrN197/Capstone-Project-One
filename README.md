@@ -4,6 +4,8 @@ This is the first capstone project github repo
 
 > In this is a website designed using css, javascript and html based on this design <https://www.behance.net/gallery/29845175/CC-Global-Summit-2015>
 
+![Image Preview](./images/screenshot.png)
+
 ## Built With
 
 - Eslint
@@ -23,7 +25,7 @@ To get a local copy up and running follow these simple example steps.
 
 ## Authors
 
-👤 **Author1**
+👤 **Brian Orora**
 
 - GitHub: [@MrBrN197](https://github.com/MrBrN197)
 - Twitter: [@Brian_Orora](https://twitter.com/brian_orora)
