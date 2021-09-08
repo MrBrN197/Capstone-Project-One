@@ -1,0 +1,185 @@
+
+@use 'color' as *;
+@use 'text' as *;
+@use 'classes' as *;
+
+section.welcome {
+  align-items: flex-start;
+
+  > * {
+    max-width: 30rem;
+  }
+
+  .white-box {
+    border: 0.3em solid white;
+    padding: 1em;
+    // background-color: yellowgreen;
+  }
+
+  @include on-desktop {
+    margin-left: 14vw;
+    margin-right: 14vw;
+  }
+}
+
+.more-button {
+  @extend .box;
+  @extend .flex;
+  @extend .flex-center;
+
+  width: 100%;
+  padding: 1rem 0;
+  gap: 0.4rem;
+  font-weight: 400;
+
+  .icon {
+    color: $orange;
+  }
+
+  &.loading .icon {
+    animation: icon-rotation 2s infinite linear;
+
+    @keyframes icon-rotation {
+      100% { transform: rotate(360deg); }
+    }
+  }
+}
+
+section.main-program {
+  background-color: $color1;
+  background-image: url("../images/icons/x.svg");
+
+  h2 {
+    color: $white;
+  }
+
+  button {
+    background-color: $orange;
+    color: white;
+  }
+
+  a {
+    text-transform: uppercase;
+    text-decoration: underline;
+    color: $white;
+    font-weight: normal;
+    padding: 2rem 0;
+  }
+}
+
+section.main-program .card-container {
+  @extend .flex-column;
+
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.8rem;
+  width: 100%;
+
+  @include on-desktop {
+    gap: 0.2em;
+  }
+}
+
+section.main-program .card {
+  background-color: rgba($white, 0.1);
+  display: flex;
+  align-items: center;
+  // justify-content: space-between;
+  padding: 1rem;
+  gap: 1rem;
+  min-width: 100%;
+  border-radius: 0.1em;
+
+  @include on-desktop {
+    flex-direction: column;
+    min-width: 0;
+    max-width: 14rem;
+    text-align: center;
+  }
+
+  .icon {
+    width: 3rem;
+    height: 3rem;
+    flex: 0 0 auto;
+  }
+
+  .description {
+    color: white;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    flex-basis: 60%;
+  }
+
+  .heading {
+    font-size: 1.4rem;
+    color: $orange;
+    font-weight: bold;
+    min-width: 10rem;
+  }
+}
+
+section.featured .card-container {
+  @extend .flex;
+
+  flex-wrap: wrap;
+}
+
+section.featured .card {
+  display: flex;
+  background-color: rgba($white, 0.1);
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  gap: 2rem;
+  border-radius: 0.1em;
+
+  @include on-desktop {
+    width: 50%;
+  }
+
+  .image {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .image-container {
+    background-image: url("../images/checkerboard.png");
+    background-size: 40%;
+    background-repeat: no-repeat;
+    position: relative;
+
+    img {
+      position: absolute;
+      width: 95%;
+      height: 95%;
+      bottom: 0;
+      right: 0;
+      border-radius: 15%;
+    }
+  }
+
+  .content {
+    // .description {}
+
+    .heading {
+      font-style: italic;
+      color: $orange;
+      position: relative;
+      padding-bottom: 1.2em;
+      padding-top: 0.5em;
+      margin-bottom: 1em;
+    }
+
+    .heading::after {
+      @include pseudo;
+
+      bottom: 0;
+      left: 0;
+      height: 0.2em;
+      width: 2em;
+      background-color: $color3;
+    }
+  }
+}

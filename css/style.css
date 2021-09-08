@@ -1,0 +1,460 @@
+.fw-1 {
+  font-weight: 100;
+}
+
+.fw-2 {
+  font-weight: 200;
+}
+
+.fw-3 {
+  font-weight: 300;
+}
+
+.fw-4 {
+  font-weight: 400;
+}
+
+.fw-5 {
+  font-weight: 500;
+}
+
+.fw-6 {
+  font-weight: 600;
+}
+
+.fw-7 {
+  font-weight: 700;
+}
+
+.fw-8 {
+  font-weight: 800;
+}
+
+.fw-9 {
+  font-weight: 900;
+}
+
+.text-xsmall {
+  font-size: 0.5rem;
+}
+
+.text-small {
+  font-size: 0.8rem;
+}
+
+.text-medium {
+  font-size: 1.2rem;
+}
+
+.text-large {
+  font-size: 1.75rem;
+}
+
+.text-xlarge {
+  font-size: 2rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.text-dbar {
+  position: relative;
+  width: fit-content;
+  width: -moz-fit-content;
+}
+
+.text-dbar::before,
+.text-dbar::after {
+  position: absolute;
+  content: "";
+  display: block;
+  height: 0.1em;
+  width: 100%;
+  background-color: #d3d3d3;
+}
+
+.text-dbar::before {
+  top: 0;
+}
+
+.text-dbar::after {
+  bottom: 0;
+}
+
+.w-10 {
+  width: 10%;
+}
+
+.w-20 {
+  width: 20%;
+}
+
+.w-30 {
+  width: 30%;
+}
+
+.w-40 {
+  width: 40%;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.w-60 {
+  width: 60%;
+}
+
+.w-70 {
+  width: 70%;
+}
+
+.w-80 {
+  width: 80%;
+}
+
+.w-90 {
+  width: 90%;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.h-10 {
+  height: 10%;
+}
+
+.h-20 {
+  height: 20%;
+}
+
+.h-30 {
+  height: 30%;
+}
+
+.h-40 {
+  height: 40%;
+}
+
+.h-50 {
+  height: 50%;
+}
+
+.h-60 {
+  height: 60%;
+}
+
+.h-70 {
+  height: 70%;
+}
+
+.h-80 {
+  height: 80%;
+}
+
+.h-90 {
+  height: 90%;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.c-box {
+  box-sizing: content-box;
+}
+
+.b-box {
+  box-sizing: border-box;
+}
+
+/* general classes */
+.flex,
+.more-button,
+section.featured .card-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-column,
+section.main-program .card-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-center,
+.more-button {
+  align-items: center;
+  justify-content: center;
+}
+
+.p-1 {
+  padding: 1rem;
+}
+
+.p-2 {
+  padding: 2rem;
+}
+
+.p-3 {
+  padding: 3rem;
+}
+
+.p-4 {
+  padding: 4rem;
+}
+
+.p-5 {
+  padding: 5rem;
+}
+
+.p-6 {
+  padding: 6rem;
+}
+
+.p-7 {
+  padding: 7rem;
+}
+
+.p-8 {
+  padding: 8rem;
+}
+
+.flex-gap-1 {
+  gap: 0.5rem;
+}
+
+.flex-gap-2 {
+  gap: 1rem;
+}
+
+.flex-gap-3 {
+  gap: 1.5rem;
+}
+
+.flex-gap-4 {
+  gap: 2rem;
+}
+
+.flex-gap-5 {
+  gap: 2.5rem;
+}
+
+.flex-gap-6 {
+  gap: 3rem;
+}
+
+.flex-gap-7 {
+  gap: 3.5rem;
+}
+
+.flex-gap-8 {
+  gap: 4rem;
+}
+
+.box,
+.more-button {
+  border: 1px solid #d3d3d3;
+  background-color: white;
+  border-radius: 0.2em;
+}
+
+@media screen and (min-width: 768px) {
+  .mobile-only {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .desktop-only {
+    display: none !important;
+  }
+}
+
+section.welcome {
+  align-items: flex-start;
+}
+
+section.welcome > * {
+  max-width: 30rem;
+}
+
+section.welcome .white-box {
+  border: 0.3em solid white;
+  padding: 1em;
+}
+
+@media screen and (min-width: 768px) {
+  section.welcome {
+    margin-left: 14vw;
+    margin-right: 14vw;
+  }
+}
+
+.more-button {
+  width: 100%;
+  padding: 1rem 0;
+  gap: 0.4rem;
+  font-weight: 400;
+}
+
+.more-button .icon {
+  color: #ec5242;
+}
+
+.more-button.loading .icon {
+  animation: icon-rotation 2s infinite linear;
+}
+
+@keyframes icon-rotation {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+section.main-program {
+  background-color: #272a31;
+  background-image: url("../images/icons/x.svg");
+}
+
+section.main-program h2 {
+  color: #f5f5f8;
+}
+
+section.main-program button {
+  background-color: #ec5242;
+  color: white;
+}
+
+section.main-program a {
+  text-transform: uppercase;
+  text-decoration: underline;
+  color: #f5f5f8;
+  font-weight: normal;
+  padding: 2rem 0;
+}
+
+section.main-program .card-container {
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.8rem;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  section.main-program .card-container {
+    gap: 0.2em;
+  }
+}
+
+section.main-program .card {
+  background-color: rgba(245, 245, 248, 0.1);
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  gap: 1rem;
+  min-width: 100%;
+  border-radius: 0.1em;
+}
+
+@media screen and (min-width: 768px) {
+  section.main-program .card {
+    flex-direction: column;
+    min-width: 0;
+    max-width: 14rem;
+    text-align: center;
+  }
+}
+
+section.main-program .card .icon {
+  width: 3rem;
+  height: 3rem;
+  flex: 0 0 auto;
+}
+
+section.main-program .card .description {
+  color: white;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  flex-basis: 60%;
+}
+
+section.main-program .card .heading {
+  font-size: 1.4rem;
+  color: #ec5242;
+  font-weight: bold;
+  min-width: 10rem;
+}
+
+section.featured .card-container {
+  flex-wrap: wrap;
+}
+
+section.featured .card {
+  display: flex;
+  background-color: rgba(245, 245, 248, 0.1);
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  gap: 2rem;
+  border-radius: 0.1em;
+}
+
+@media screen and (min-width: 768px) {
+  section.featured .card {
+    width: 50%;
+  }
+}
+
+section.featured .card .image {
+  width: 10rem;
+  height: 10rem;
+}
+
+section.featured .card .image-container {
+  background-image: url("../images/checkerboard.png");
+  background-size: 40%;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+section.featured .card .image-container img {
+  position: absolute;
+  width: 95%;
+  height: 95%;
+  bottom: 0;
+  right: 0;
+  border-radius: 15%;
+}
+
+section.featured .card .content .heading {
+  font-style: italic;
+  color: #ec5242;
+  position: relative;
+  padding-bottom: 1.2em;
+  padding-top: 0.5em;
+  margin-bottom: 1em;
+}
+
+section.featured .card .content .heading::after {
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 0.2em;
+  width: 2em;
+  background-color: #d3d3d3;
+}

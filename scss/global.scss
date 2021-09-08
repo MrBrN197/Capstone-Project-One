@@ -1,0 +1,282 @@
+@use 'color' as *;
+@use 'text' as *;
+@use 'classes' as *;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+// html {
+//   font-size: 10px;
+// }
+
+body {
+  font-family: cocogoose, sans-serif;
+  font-family: Lato, sans-serif;
+  background-color: $white;
+  color: lighten($color1, 20%);
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  font-weight: bold;
+  color: inherit;
+}
+
+button {
+  border: none;
+  font-family: inherit;
+  display: block;
+  cursor: pointer;
+  padding: 1.4em;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.icon {
+  width: 2em;
+  height: 2em;
+}
+
+main section .icon {
+  color: $white;
+}
+
+header {
+  // height: 5rem;
+  // box-shadow: 0 2px 2px $color3;
+  // padding: 0 2rem;
+
+  a {
+    padding: 0 1em;
+    // background-color: red;
+  }
+
+  .banner {
+    font-size: 0.8rem;
+    background-color: $color1;
+    color: white;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    justify-content: flex-end;
+    padding: 1rem 3rem;
+
+    .icon {
+      box-sizing: content-box;
+    }
+  }
+
+  nav {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+
+    @include on-desktop() {
+      justify-content: space-around;
+    }
+
+    .hamburger .icon {
+      width: 3rem;
+      height: 3rem;
+    }
+
+    ul {
+      display: flex;
+      gap: 1em;
+    }
+
+    li {
+      padding: 0.8em;
+      font-family: cocogoose, sans-serif;
+      font-size: 0.8rem;
+      font-weight: 300;
+    }
+
+    a {
+      font-weight: unset;
+    }
+
+    li:hover {
+      background-color: rgba($orange, 0.05);
+    }
+
+    .logo {
+      color: $color1;
+      text-decoration: none;
+    }
+
+    button {
+      border: 0.4em solid $orange;
+      background-color: $white;
+      padding: 0.6em 0.8em;
+      color: $orange;
+      font-family: cocogoose, sans-serif;
+      font-size: 0.8rem;
+      font-weight: 200;
+      transition: 40ms ease-in;
+
+      &:hover {
+        background-color: $orange;
+        color: white;
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+main section {
+  @extend .flex-column;
+  @extend .flex-center;
+
+  padding: 1rem;
+  gap: 2rem;
+
+  h1 .sub-heading {
+    color: $orange;
+    font-size: 1.5rem;
+    font-family: Lato, sans-serif;
+  }
+
+  h1 {
+    color: $orange;
+    font-size: 2.5rem;
+    font-weight: 900;
+    font-family: cocogoose, sans-serif;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  h2::after {
+    $h: 0.1em;
+
+    bottom: 0;
+    content: "";
+    display: block;
+    height: $h;
+    width: 1.5em;
+    border-radius: $h * 0.5;
+    margin: 0 auto;
+    margin-top: 0.8em;
+    background-color: $orange;
+  }
+}
+
+main section + section {
+  border-top: 1px solid $color3;
+  margin-top: 8rem;
+}
+
+section.partner {
+  background-color: lighten($color1, 5%);
+  color: $white;
+
+  ul {
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  ul li {
+    display: block;
+    filter: grayscale(100%) contrast(30%);
+    height: 2rem;
+  }
+
+  ul li img {
+    object-fit: contain;
+    // padding: 1rem;
+    // box-sizing: content-box;
+  }
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 4rem 0;
+  font-family: cocogoose, sans-serif;
+  color: $color1;
+
+  @include on-desktop {
+    background-color: $color1;
+    color: $white;
+  }
+
+  .left {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1;
+  }
+
+  .right {
+    font-size: 0.7rem;
+    font-weight: 200;
+  }
+}
+
+#mobile-menu {
+  $modalWidth: 12rem;
+
+  position: fixed;
+  top: 0;
+  left: -$modalWidth;
+  bottom: 0;
+  width: $modalWidth;
+  background-color: $color1;
+  z-index: 1;
+  transition: all 200ms linear;
+
+  &.active {
+    transform: translateX($modalWidth);
+  }
+
+  .close-btn {
+    height: 3rem;
+    width: 3rem;
+    margin-left: auto;
+    padding: 1rem;
+    box-sizing: content-box;
+    color: $orange;
+  }
+
+  ul {
+    // background-color: yellowgreen;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1em;
+    font-size: 1.6rem;
+    margin: 2rem;
+
+    li {
+      padding: 0.2em;
+      display: block;
+      background-color: rgba($orange, 0.15);
+      color: $orange;
+
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}

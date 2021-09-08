@@ -1,0 +1,71 @@
+@use 'color' as *;
+
+/* general classes */
+.flex {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-center {
+  align-items: center;
+  justify-content: center;
+}
+
+$spaces: (1,2,3,4,5,6,7,8);
+
+@each $space in $spaces {
+  .p-#{$space} {
+    padding: $space * 1rem;
+  }
+}
+
+@each $gap in $spaces {
+  .flex-gap-#{$gap} {
+    gap: $gap * 0.5rem;
+  }
+}
+
+.box {
+  border: 1px solid $color3;
+  background-color: white;
+  border-radius: 0.2em;
+}
+
+@mixin on-desktop {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin on-mobile {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+.mobile-only {
+  @include on-desktop {
+    display: none !important;
+  }
+}
+
+.desktop-only {
+  @include on-mobile {
+    display: none !important;
+  }
+}
+
+@mixin pseudo {
+  display: block;
+  content: "";
+  position: absolute;
+}

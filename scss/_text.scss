@@ -1,0 +1,71 @@
+@use 'color' as *;
+
+$sizes: (1, 2, 3, 4, 5, 6, 7, 8, 9);
+
+@each $s in $sizes {
+  .fw-#{$s} {
+    font-weight: $s * 100;
+  }
+}
+
+$font-sizes: (xsmall: 0.5rem, small: 0.8rem, medium: 1.2rem, large: 1.75rem, xlarge: 2rem);
+
+@each $name, $size in $font-sizes {
+  .text-#{$name} {
+    font-size: $size;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.text-dbar {
+  position: relative;
+  width: fit-content;
+  width: -moz-fit-content;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    display: block;
+    height: 0.1em;
+    width: 100%;
+    background-color: $color3;
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+}
+
+$sizes: (1,2,3,4,5,6,7,8,9,10);
+
+@each $width in  $sizes {
+  .w-#{$width*10} {
+    width: $width * 10%;
+  }
+}
+
+@each $s in $sizes {
+  .h-#{$s*10} {
+    height: $s * 10%;
+  }
+}
+
+.c-box {
+  box-sizing: content-box;
+}
+
+.b-box {
+  box-sizing: border-box;
+}
