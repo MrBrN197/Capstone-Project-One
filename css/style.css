@@ -328,6 +328,7 @@ section.main-program button {
 
 section.main-program a {
   text-transform: uppercase;
+  text-decoration: underline;
   color: #f5f5f8;
   font-weight: normal;
   padding: 2rem 0;
@@ -408,8 +409,8 @@ section.featured .card {
 }
 
 section.featured .card .image {
-  width: 8rem;
-  height: 8rem;
+  width: 10rem;
+  height: 10rem;
 }
 
 section.featured .card .image-container {
@@ -421,10 +422,11 @@ section.featured .card .image-container {
 
 section.featured .card .image-container img {
   position: absolute;
-  width: 90%;
-  height: 90%;
+  width: 95%;
+  height: 95%;
   bottom: 0;
   right: 0;
+  border-radius: 15%;
 }
 
 section.featured .card .content .heading {

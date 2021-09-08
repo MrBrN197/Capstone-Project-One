@@ -52,6 +52,7 @@ section.main-program {
 
   a {
     text-transform: uppercase;
+    text-decoration: underline;
     color: $white;
     font-weight: normal;
     padding: 2rem 0;
@@ -131,8 +132,8 @@ section.featured .card {
   }
 
   .image {
-    width: 8rem;
-    height: 8rem;
+    width: 10rem;
+    height: 10rem;
   }
 
   .image-container {
@@ -143,10 +144,11 @@ section.featured .card {
 
     img {
       position: absolute;
-      width: 90%;
-      height: 90%;
+      width: 95%;
+      height: 95%;
       bottom: 0;
       right: 0;
+      border-radius: 15%;
     }
   }
 
