@@ -6,8 +6,16 @@ const initializeListeners = () => {
     mobileMenu.classList.remove('active');
   });
 
-  hamburger.addEventListener('click', () => {
+  hamburger.addEventListener('click', (e) => {
     mobileMenu.classList.add('active');
+    e.stopPropagation();
+  });
+
+  document.addEventListener('click', () => {
+    mobileMenu.classList.remove('active');
+  });
+  mobileMenu.addEventListener('click', (e) => {
+    e.stopPropagation();
   });
 };
 
