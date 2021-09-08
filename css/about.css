@@ -67,7 +67,9 @@
   width: fit-content;
   width: -moz-fit-content;
 }
-.text-dbar::before, .text-dbar::after {
+
+.text-dbar::before,
+.text-dbar::after {
   position: absolute;
   content: "";
   display: block;
@@ -75,9 +77,11 @@
   width: 100%;
   background-color: #d3d3d3;
 }
+
 .text-dbar::before {
   top: 0;
 }
+
 .text-dbar::after {
   bottom: 0;
 }
@@ -288,6 +292,7 @@ main section {
   height: 12rem;
   position: relative;
 }
+
 .prev-summits .image::before {
   position: absolute;
   content: "";
@@ -298,6 +303,7 @@ main section {
   right: 0;
   background-color: rgba(232, 48, 29, 0.6);
 }
+
 .prev-summits .image .image-text {
   font-family: cocogoose, sans-serif;
   position: absolute;
@@ -307,11 +313,13 @@ main section {
   right: 0;
   color: #f5f5f8;
 }
+
 .prev-summits .image .image-text .heading {
   font-size: 2rem;
   font-weight: 400;
   margin-bottom: 0.5em;
 }
+
 .prev-summits .image .image-text .description {
   font-weight: 300;
   text-align: center;
@@ -322,32 +330,36 @@ main section {
   gap: 1rem;
   width: 100%;
 }
+
 @media screen and (min-width: 768px) {
   .copyright-box {
     width: unset;
   }
 }
+
 .copyright-box .icon {
   width: 4rem;
   height: 4rem;
 }
+
 .copyright-box .copyright-text {
   line-height: 1.1;
 }
+
 .copyright-box .copyright-text p:nth-child(1) {
   font-size: 2rem;
   letter-spacing: 0.25rem;
   color: #272a31;
 }
+
 .copyright-box .copyright-text p:nth-child(2) {
   font-size: 1.5rem;
   letter-spacing: 0.2rem;
   color: #272a31;
 }
+
 .copyright-box .copyright-text p:nth-child(3) {
   font-size: 0.7rem;
   letter-spacing: 0;
   line-height: 1.8;
 }
-
-/*# sourceMappingURL=about.css.map */
