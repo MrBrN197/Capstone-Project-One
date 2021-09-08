@@ -475,13 +475,20 @@ footer {
   align-items: center;
   padding: 4rem 0;
   font-family: cocogoose, sans-serif;
+  color: #272a31;
+}
+
+@media screen and (min-width: 768px) {
+  footer {
+    background-color: #272a31;
+    color: #f5f5f8;
+  }
 }
 
 footer .left {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1;
-  color: #272a31;
 }
 
 footer .right {

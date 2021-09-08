@@ -215,12 +215,17 @@ footer {
   align-items: center;
   padding: 4rem 0;
   font-family: cocogoose, sans-serif;
+  color: $color1;
+
+  @include on-desktop {
+    background-color: $color1;
+    color: $white;
+  }
 
   .left {
     font-size: 1rem;
     font-weight: 400;
     line-height: 1;
-    color: $color1;
   }
 
   .right {
