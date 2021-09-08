@@ -25,7 +25,7 @@ ul {
 
 a {
   display: block;
-  text-decoration: underline;
+  text-decoration: none;
   font-weight: bold;
   color: inherit;
 }
@@ -58,15 +58,28 @@ main section .icon {
 }
 
 header {
-  height: 5rem;
+  // height: 5rem;
   // box-shadow: 0 2px 2px $color3;
-  display: flex;
-  align-items: center;
-  padding: 0 2rem;
+  // padding: 0 2rem;
 
-  .hamburger .icon {
-    width: 3rem;
-    height: 3rem;
+  a {
+    padding: 0 1em;
+    // background-color: red;
+  }
+
+  .banner {
+    font-size: 0.8rem;
+    background-color: $color1;
+    color: white;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    justify-content: flex-end;
+    padding: 1rem 3rem;
+
+    .icon {
+      box-sizing: content-box;
+    }
   }
 
   nav {
@@ -74,9 +87,15 @@ header {
     flex-grow: 1;
     align-items: center;
     justify-content: space-between;
+    padding: 1rem;
 
     @include on-desktop() {
       justify-content: space-around;
+    }
+
+    .hamburger .icon {
+      width: 3rem;
+      height: 3rem;
     }
 
     ul {
@@ -92,7 +111,6 @@ header {
     }
 
     a {
-      text-decoration: none;
       font-weight: unset;
     }
 
