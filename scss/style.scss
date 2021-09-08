@@ -35,6 +35,14 @@ section.welcome {
   .icon {
     color: $orange;
   }
+
+  &.loading .icon {
+    animation: icon-rotation 2s infinite linear;
+
+    @keyframes icon-rotation {
+      100% { transform: rotate(360deg); }
+    }
+  }
 }
 
 section.main-program {
