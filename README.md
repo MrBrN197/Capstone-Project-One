@@ -28,7 +28,7 @@ To get a local copy up and running follow these simple example steps.
 👤 **Brian Orora**
 
 - GitHub: [@MrBrN197](https://github.com/MrBrN197)
-- Twitter: [@Brian_Orora](https://twitter.com/brian_orora)
+- Twitter: [@MrBrN197](https://twitter.com/MrBrN197)
 
 ## 🤝 Contributing
 
